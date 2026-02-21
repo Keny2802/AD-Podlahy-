@@ -1,7 +1,7 @@
 const HashLess = (evt: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     evt.preventDefault();
 
-    const targetLink = document.getElementById(id);
+    const targetLink = document.querySelector(`#${id}`);
 
     if (targetLink) {
         targetLink.scrollIntoView({

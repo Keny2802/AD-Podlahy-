@@ -198,8 +198,8 @@ const Content = () => {
                                             [
                                                 `roznášecí vrstva v těžkých plovoucích podlahách`,
                                                 `náhrada cementových potěrů (vyjma vlhkých míst jako bazény, prádelny, atd...)`,
-                                                `potěr pro podlahové topení`,
-                                                `potěr na oddělovací vrstvě`
+                                                `potěr pro podlahové topení.`,
+                                                `potěr na oddělovací vrstvě.`
                                             ].map((textBlock, index) => {
                                                 return (
                                                     <ListItem
@@ -211,6 +211,27 @@ const Content = () => {
                                         }
                                     </FlexCol>
                                 </List>
+                                <MarginTop>
+                                    <List className="ml-4 md:ml-6 lg:ml-12 max-w-3xl">
+                                        <FlexCol className="gap-1.5 md:gap-2 lg:gap-2.5">
+                                            {
+                                                [
+                                                    `✅ Nacenění projektu ZDARMA.`,
+                                                    `✅ Profesionální přístup a dodržení termínů.`,
+                                                    `✅ Působíme v celé České republice.`,
+                                                    `👇 Napište nám do zpráv a získejte kalkulaci.`
+                                                ].map((textBlock, index) => {
+                                                    return (
+                                                        <ListItem
+                                                        key={index}>
+                                                            {textBlock}
+                                                        </ListItem>
+                                                    );
+                                                })
+                                            }
+                                        </FlexCol>
+                                    </List>
+                                </MarginTop>
                             </MarginTop>
                         </Wrapper>
                     </Flex>

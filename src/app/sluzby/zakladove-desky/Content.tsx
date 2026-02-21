@@ -16,6 +16,7 @@ import YAnimation from "@/app/components/YAnimation";
 import Img from "@/app/components/Img";
 import List from "@/app/components/List";
 import ListItem from "@/app/components/ListItem";
+import Con from "../zemni-prace/Content";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
@@ -131,7 +132,7 @@ const Content = () => {
                                                 `✅ Zaměření a nacenění ZDARMA.`,
                                                 `✅ Profesionální přístup a dodržení termínů.`,
                                                 `✅ Působíme v kraji Zlínský a Moravsko Slezský.`,
-                                                `👇 Napište nám do zpráv a získejte kalkulaci`
+                                                `👇 Napište nám do zpráv a získejte kalkulaci.`
                                             ].map((textBlock, index) => {
                                                 return (
                                                     <ListItem
@@ -157,6 +158,7 @@ const Content = () => {
                     </Flex>
                 </MarginTop>
             </Section>
+            <Con />
             <About />
             <Contact />
             <Footer />

@@ -8,17 +8,17 @@ export const HeaderSet = [
         text: "Suché potěry",
     },
     {
-        href: "/sluzby/zakladove-desky",
-        text: "Základové desky",
-    },
-    {
-        href: "/sluzby/zemni-prace",
-        text: "Zemní práce",
-    },
-    {
         href: "/sluzby/strikana-izolace",
         text: "Stříkaná izolace",
     },
+    {
+        href: "/sluzby/zakladove-desky",
+        text: "Základové desky",
+    },
+    // {
+    //     href: "/sluzby/zemni-prace",
+    //     text: "Zemní práce",
+    // },
     // {
     //     href: "/sluzby/odtah-vozidel",
     //     text: "Odtah vozidel",

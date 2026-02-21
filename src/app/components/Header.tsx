@@ -87,7 +87,7 @@ const Header = ({ ...props }: HeaderType) => {
             }}
             transition={{
                 duration: 0.3,
-                ease: "easeInOut"
+                ease: "easeOut"
             }}
             className={clsx(className, `bg-white shadow-md border-b border-gray-200 w-full z-50 header-component`)}>
                 <Padding>

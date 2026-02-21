@@ -19,7 +19,7 @@ import Footer from "@/app/sections/Footer";
 const Content = () => {
     return (
         <Fragment>
-            <ContactHeader />
+            {/* <ContactHeader />
             <Header />
             <Section
             color="secondary">
@@ -59,7 +59,44 @@ const Content = () => {
             </Section>
             <About />
             <Contact />
-            <Footer />
+            <Footer /> */}
+            <Section
+            color="secondary"
+            className="border-t border-gray-200">
+                <FlexCol className="text-center items-center gap-2 md:gap-2.5 lg:gap-3">
+                    <Heading>
+                        Kompletní zemní a výkopové práce - od základů až po finální terén
+                    </Heading>
+                    <BodyText>
+                        Realizujeme zemní práce všeho druhu s důrazem na přesnost, rychlost a dodržování termínů. Disponujeme moderní technikou, která si poradí s úzkými prostory u rodinných domů i s náročnými terénními úpravami.
+                    </BodyText>
+                </FlexCol>
+                <MarginTop>
+                    <Grid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto">
+                        {
+                            [
+                                "/fota/podstranky/zemni-prace/zemni-prace-1.jpeg",
+                                "/fota/podstranky/zemni-prace/zemni-prace-2.jpeg",
+                                "/fota/podstranky/zemni-prace/zemni-prace-3.jpeg",
+                            ].map((image, index) => {
+                                return (
+                                    <YAnimation
+                                    key={index}
+                                    className="w-full min-h-[300px] max-h-[300px] cursor-pointer">
+                                        <Img
+                                        width={500}
+                                        height={500}
+                                        src={image}
+                                        alt={`${index + 1}. Ukázka z realizace zemních prací společnosti AD podlahy.`}
+                                        className="w-full min-h-[300px] max-h-[300px] rounded-2xl object-cover cursor-pointer"
+                                        />
+                                    </YAnimation>
+                                );
+                            })
+                        }
+                    </Grid>
+                </MarginTop>
+            </Section>
         </Fragment>
     );
 };
