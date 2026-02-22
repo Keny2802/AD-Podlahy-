@@ -42,7 +42,7 @@ const Content = () => {
                                 `Maximální vodorovný dosah: až 300 m.`,
                                 `Stabilizace: pevná konstrukce na podstavci s možností kotvení do země.`,
                                 `Typ čerpadla: dvoupístové hydraulické s S - ventilem.`,
-                                `Motor: dieselový, výkon dle konfigurace čerpadla.`,
+                                `Motor: Deutz o výkonu 38,8 kW.`,
                                 `Použití: betonáž rodinných domů, menších hal a průmyslových objektů.`
                             ].map((textBlock, index) => {
                                 return (
