@@ -44,7 +44,7 @@ const Content = () => {
                     </BodyText>
                 </FlexCol>
                 <MarginTop>
-                    <Flex className="justify-center flex-col-reverse gap-2 md:gap-4 lg:gap-6">
+                    <Flex className="justify-center flex-col gap-2 md:gap-4 lg:gap-6">
                         <List>
                             <Grid className="grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
                                 {[
