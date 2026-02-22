@@ -22,6 +22,11 @@ import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
 import SwipeSlider from "@/app/components/SwipeSlider";
 
+const images = [
+    "/fota/sekce/vozovy-park/vozovy-park-3-technicke-listy-1.jpg",
+    "/fota/sekce/vozovy-park/vozovy-park-3-technicke-listy-2.jpg",
+];
+
 const Content = () => {
     const [imgIndex, setImgIndex] = useState<number | null>(0);
     const [isClosed, setToClosed] = useState<boolean>(false);
@@ -90,6 +95,16 @@ const Content = () => {
             <About />
             <Contact />
             <Footer />
+            {
+                imgIndex !== null && !isClosed && (
+                    <SwipeSlider
+                    src={images}
+                    startIndex={imgIndex ?? 0}
+                    isClosed={isClosed}
+                    setToClosed={setToClosed}
+                    />
+                )
+            }
         </Fragment>
     );
 };

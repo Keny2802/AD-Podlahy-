@@ -24,7 +24,7 @@ import SwipeSlider from "@/app/components/SwipeSlider";
 
 const images = [
     "/fota/sekce/vozovy-park/vozovy-park-2-technicke-listy.jpg"
-]
+];
 
 const Content = () => {
     const [imgIndex, setImgIndex] = useState<number | null>(0);
