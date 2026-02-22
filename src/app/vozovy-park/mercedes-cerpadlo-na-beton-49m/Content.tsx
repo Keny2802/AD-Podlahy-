@@ -1,4 +1,7 @@
+"use client";
+
 import {
+    useState,
     Fragment
 } from "react";
 
@@ -9,14 +12,20 @@ import FlexCol from "@/app/components/FlexCol";
 import Heading from "@/app/components/Heading";
 import BodyText from "@/app/components/BodyText";
 import MarginTop from "@/app/components/MarginTop";
+import Flex from "@/app/components/Flex";
 import Grid from "@/app/components/Grid";
 import List from "@/app/components/List";
 import ListItem from "@/app/components/ListItem";
+import Img from "@/app/components/Img";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
+import SwipeSlider from "@/app/components/SwipeSlider";
 
 const Content = () => {
+    const [imgIndex, setImgIndex] = useState<number | null>(0);
+    const [isClosed, setToClosed] = useState<boolean>(false);
+
     return (
         <Fragment>
             <ContactHeader />
@@ -24,35 +33,58 @@ const Content = () => {
             <Section color="secondary">
                 <FlexCol className="justify-center items-center text-center gap-2.5 md:gap-3 lg:gap-4">
                     <Heading>
-                        Mercedes čerpadlo na beton 49 m
+                        Mercedes čerpadlo na beton 50 m
                     </Heading>
                     <BodyText>
                         Přečtěte si 10 důležitých informací o tomto voze.
                     </BodyText>
                 </FlexCol>
                 <MarginTop>
-                    <List>
-                        <Grid className="grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
-                            {[
-                                `Podvozek: Mercedes-Benz nákladní podvozek 5 - 6 nápravový.`,
-                                `Dosah výložníku: 49 m (5 - 6 dílné hydraulické výložní rameno).`,
-                                `Výkon čerpadla: cca 140 - 180 m³ / h (dle konfigurace čerpací jednotky).`,
-                                `.Maximální čerpací tlak: až 90 - 110 bar`,
-                                `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
-                                `Průměr betonového potrubí: DN 125 mm / DN 150 mm.`,
-                                `Maximální výška čerpání: cca 45 - 49 m.`,
-                                `Maximální vodorovný dosah: cca 350 - 450 m.`,
-                                `Stabilizace: hydraulické výsuvné opěry s elektronickým řízením a bezpečnostními senzory.`,
-                                `Emisní norma motoru: Euro 5 / Euro 6 (dle roku výroby a konfigurace).`
-                            ].map((textBlock, index) => {
-                                return (
-                                    <ListItem key={index}>
-                                        {textBlock}
-                                    </ListItem>
-                                );
-                            })}
-                        </Grid>
-                    </List>
+                    <Flex className="justify-center flex-col gap-2 md:gap-4 lg:gap-6">
+                        <List>
+                            <Grid className="grid-cols-1 gap-2.5 md:gap-3 lg:gap-4">
+                                {[
+                                    `Dosah výložníku: 50 m (6 dílné hydraulické výložní rameno).`,
+                                    `Výkon čerpadla: 170 m³ / h.`,
+                                    `Maximální čerpací tlak: až 85 bar`,
+                                    `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
+                                    `Průměr betonového potrubí: DN 125 mm.`,
+                                    `Maximální výška čerpání: 50 m.`,
+                                    `Maximální vodorovný dosah: 45 m.`,
+                                    `Stabilizace: hydraulické výsuvné opěry s elektronickým řízením a bezpečnostními senzory.`,
+                                    `Emisní norma motoru: Euro 6.`
+                                ].map((textBlock, index) => {
+                                    return (
+                                        <ListItem key={index}>
+                                            {textBlock}
+                                        </ListItem>
+                                    );
+                                })}
+                            </Grid>
+                        </List>
+                        <Img
+                        width={400}
+                        height={400}
+                        onClick={() => {
+                            setImgIndex(0);
+                            setToClosed(false);
+                        }}
+                        src="/fota/sekce/vozovy-park/vozovy-park-3-technicke-listy-1.jpg"
+                        alt="Mercedes čerpadlo na beton 50 m Technické listy číslo 1 společnosti AD Podlahy"
+                        className="w-full md:max-w-[400px] object-cover rounded-md"
+                        />
+                        <Img
+                        width={400}
+                        height={400}
+                        onClick={() => {
+                            setImgIndex(1);
+                            setToClosed(false);
+                        }}
+                        src="/fota/sekce/vozovy-park/vozovy-park-3-technicke-listy-2.jpg"
+                        alt="Mercedes čerpadlo na beton 50 m Technické listy číslo 2 společnosti AD Podlahy"
+                        className="w-full md:max-w-[400px] object-cover rounded-md"
+                        />
+                    </Flex>
                 </MarginTop>
             </Section>
             <About />

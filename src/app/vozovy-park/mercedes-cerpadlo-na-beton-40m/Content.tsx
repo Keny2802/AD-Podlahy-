@@ -51,7 +51,7 @@ const Content = () => {
                                     `Podvozek: Mercedes-Benz nákladní podvozek 4 nápravový.`,
                                     `Dosah výložníku: 40 m (5 dílné hydraulické rameno).`,
                                     `Výkon čerpadla: 160 m³ / h.`,
-                                    `Maximální čerpací tlak: až 85 - 100 bar.`,
+                                    `Maximální čerpací tlak: 70 bar.`,
                                     `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
                                     `Průměr betonového potrubí: DN 125 mm.`,
                                     `Maximální výška čerpání: 40 m.`,
