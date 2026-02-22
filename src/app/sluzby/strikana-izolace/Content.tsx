@@ -1,4 +1,7 @@
+"use client";
+
 import {
+    useState,
     Fragment
 } from "react";
 
@@ -19,8 +22,17 @@ import Img from "@/app/components/Img";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
+import SwipeSlider from "@/app/components/SwipeSlider";
+
+const images = [
+    "/fota/podstranky/strikana-izolace/strikana-izolace-1.jpeg",
+    "/fota/podstranky/strikana-izolace/strikana-izolace-2.jpeg"
+]
 
 const Content = () => {
+    const [imgIndex, setImgIndex] = useState<number | null>(0);
+    const [isClosed, setToClosed] = useState<boolean>(false);
+
     return (
         <Fragment>
             <ContactHeader />
@@ -71,6 +83,10 @@ const Content = () => {
                             height={450}
                             src="/fota/podstranky/strikana-izolace/strikana-izolace-1.jpeg"
                             alt="Stříkaná izolace v halovém objektu - realizováno společností AD Podlady"
+                            onClick={() => {
+                                setImgIndex(0);
+                                setToClosed(false);
+                            }}
                             className="w-full md:min-w-[200px] md:max-w-[450px] md:max-h-[450px] object-cover rounded-md"
                             />
                         </YAnimation>
@@ -84,6 +100,10 @@ const Content = () => {
                             height={300}
                             src="/fota/podstranky/strikana-izolace/strikana-izolace-2.jpeg"
                             alt="Stříkaná izolace v rodinném domě - realizováno společností AD Podlady"
+                            onClick={() => {
+                                setImgIndex(1);
+                                setToClosed(false);
+                            }}
                             className="w-full md:min-w-[200px] md:max-w-[300px] md:max-h-[300px] object-cover rounded-md"
                             />
                         </YAnimation>
@@ -142,6 +162,16 @@ const Content = () => {
             <About />
             <Contact />
             <Footer />
+            {
+                imgIndex !== null && !isClosed && (
+                    <SwipeSlider
+                    src={images}
+                    startIndex={imgIndex ?? 0}
+                    isClosed={isClosed}
+                    setToClosed={setToClosed}
+                    />
+                )
+            }
         </Fragment>
     );
 };

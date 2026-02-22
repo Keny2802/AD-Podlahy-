@@ -1,4 +1,7 @@
+"use client";
+
 import {
+    useState,
     Fragment
 } from "react";
 
@@ -19,8 +22,22 @@ import ListItem from "@/app/components/ListItem";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
+import SwipeSlider from "@/app/components/SwipeSlider";
+
+const images = [
+    "/fota/podstranky/lite-podlahy/lite-podlahy-0.jpeg",
+    "/fota/podstranky/lite-podlahy/lite-podlahy-5.avif",
+    "/fota/podstranky/lite-podlahy/lite-podlahy-2.jpeg",
+    "/fota/podstranky/lite-podlahy/lite-podlahy-02.jpg",
+    "/fota/podstranky/lite-podlahy/lite-podlahy-2.avif",
+    "/fota/podstranky/lite-podlahy/lite-podlahy-01.jpg",
+    "/fota/podstranky/lite-podlahy/lite-podlahy-4.avif"
+]
 
 const Content = () => {
+    const [imgIndex, setImgIndex] = useState<number | null>(0);
+    const [isClosed, setToClosed] = useState<boolean>(false);
+
     return (
         <Fragment>
             <ContactHeader />
@@ -53,6 +70,10 @@ const Content = () => {
                             <Img
                             width={300}
                             height={300}
+                            onClick={() => {
+                                setImgIndex(0);
+                                setToClosed(false);
+                            }}
                             src="/fota/podstranky/lite-podlahy/lite-podlahy-0.jpeg"
                             alt="Stříkání lité podlahy realizace firmy AD Podlady"
                             className="w-full max-h-[350px] md:min-w-[300px] md:max-w-[600px] md:max-h-[450px] object-cover rounded-md"
@@ -103,6 +124,10 @@ const Content = () => {
                             <Img
                             width={300}
                             height={300}
+                            onClick={() => {
+                                setImgIndex(1);
+                                setToClosed(false);
+                            }}
                             src="/fota/podstranky/lite-podlahy/lite-podlahy-5.avif"
                             alt="Litá podlaha pokrytá epoxidem realizace společností AD podlahy"
                             className="w-full md:min-w-[300px] md:max-w-[500px] object-cover rounded-md"
@@ -169,6 +194,10 @@ const Content = () => {
                             <Img
                             width={600}
                             height={600}
+                            onClick={() => {
+                                setImgIndex(2);
+                                setToClosed(false);
+                            }}
                             src="/fota/podstranky/lite-podlahy/lite-podlahy-2.jpeg"
                             alt="Oranžové čerpadlo na lité podlahy společnosti AD Podlady"
                             className="w-full md:min-w-[300px] md:max-w-[600px] md:max-h-[600px] object-cover rounded-md"
@@ -182,6 +211,10 @@ const Content = () => {
                             <Img
                             width={400}
                             height={400}
+                            onClick={() => {
+                                setImgIndex(3);
+                                setToClosed(false);
+                            }}
                             src="/fota/podstranky/lite-podlahy/lite-podlahy-02.jpg"
                             alt="Epoxidová litá podlaha v útulném domě, realizováno společností AD Podlahy"
                             className="w-full md:max-w-[400px] object-cover rounded-md"
@@ -255,6 +288,10 @@ const Content = () => {
                                             height={400}
                                             src={image}
                                             alt={`${index + 1}. Ukázka realizace z fotogalerie litých podlah společnosti AD Podlahy`}
+                                            onClick={() => {
+                                                setImgIndex(index);
+                                                setToClosed(false);
+                                            }}
                                             className="w-full max-h-[350px] md:max-w-[400px] md:max-h-[400px] object-cover rounded-2xl cursor-pointer"
                                             />
                                         </YAnimation>
@@ -268,6 +305,16 @@ const Content = () => {
             <About />
             <Contact />
             <Footer />
+            {
+                imgIndex !== null && !isClosed && (
+                    <SwipeSlider
+                    src={images}
+                    startIndex={imgIndex ?? 0}
+                    isClosed={isClosed}
+                    setToClosed={setToClosed}
+                    />
+                )
+            }
         </Fragment>
     );
 };

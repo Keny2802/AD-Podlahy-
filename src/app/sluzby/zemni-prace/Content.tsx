@@ -1,4 +1,7 @@
+"use client";
+
 import {
+    useState,
     Fragment
 } from "react";
 
@@ -15,8 +18,18 @@ import Img from "@/app/components/Img";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
+import SwipeSlider from "@/app/components/SwipeSlider";
+
+const images = [
+    "/fota/podstranky/zemni-prace/zemni-prace-1.jpeg",
+    "/fota/podstranky/zemni-prace/zemni-prace-2.jpeg",
+    "/fota/podstranky/zemni-prace/zemni-prace-3.jpeg",
+];
 
 const Content = () => {
+    const [imgIndex, setImgIndex] = useState<number | null>(0);
+    const [isClosed, setToClosed] = useState<boolean>(false);
+
     return (
         <Fragment>
             {/* <ContactHeader />
@@ -74,11 +87,7 @@ const Content = () => {
                 <MarginTop>
                     <Grid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto">
                         {
-                            [
-                                "/fota/podstranky/zemni-prace/zemni-prace-1.jpeg",
-                                "/fota/podstranky/zemni-prace/zemni-prace-2.jpeg",
-                                "/fota/podstranky/zemni-prace/zemni-prace-3.jpeg",
-                            ].map((image, index) => {
+                            images.map((image, index) => {
                                 return (
                                     <YAnimation
                                     key={index}
@@ -87,6 +96,10 @@ const Content = () => {
                                         width={500}
                                         height={500}
                                         src={image}
+                                        onClick={() => {
+                                            setImgIndex(index);
+                                            setToClosed(false);
+                                        }}
                                         alt={`${index + 1}. Ukázka z realizace zemních prací společnosti AD podlahy.`}
                                         className="w-full min-h-[300px] max-h-[300px] rounded-2xl object-cover cursor-pointer"
                                         />
@@ -97,6 +110,16 @@ const Content = () => {
                     </Grid>
                 </MarginTop>
             </Section>
+            {
+                imgIndex !== null && !isClosed && (
+                    <SwipeSlider
+                    src={images}
+                    startIndex={imgIndex ?? 0}
+                    isClosed={isClosed}
+                    setToClosed={setToClosed}
+                    />
+                )
+            }
         </Fragment>
     );
 };

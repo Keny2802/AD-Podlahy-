@@ -1,4 +1,7 @@
+"use client";
+
 import {
+    useState,
     Fragment
 } from "react";
 
@@ -20,8 +23,18 @@ import Con from "../zemni-prace/Content";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
+import SwipeSlider from "@/app/components/SwipeSlider";
+
+const images = [
+    "/fota/podstranky/zakladove-desky/zakladove-desky-1.jpeg",
+    "/fota/podstranky/zakladove-desky/zakladove-desky-2.jpeg",
+    "/fota/podstranky/zakladove-desky/zakladove-desky-3.jpeg"
+]
 
 const Content = () => {
+    const [imgIndex, setImgIndex] = useState<number | null>(0);
+    const [isClosed, setToClosed] = useState<boolean>(false);
+
     return (
         <Fragment>
             <ContactHeader />
@@ -68,6 +81,10 @@ const Content = () => {
                             <Img
                             width={450}
                             height={450}
+                            onClick={() => {
+                                setImgIndex(0);
+                                setToClosed(false);
+                            }}
                             src="/fota/podstranky/zakladove-desky/zakladove-desky-1.jpeg"
                             alt="Hotová základová deska pro rodinný dům - realizováno společností AD Podlady"
                             className="w-full md:min-w-[200px] md:max-w-[450px] md:max-h-[450px] object-cover rounded-md"
@@ -81,6 +98,10 @@ const Content = () => {
                             <Img
                             width={450}
                             height={450}
+                            onClick={() => {
+                                setImgIndex(1);
+                                setToClosed(false);
+                            }}
                             src="/fota/podstranky/zakladove-desky/zakladove-desky-2.jpeg"
                             alt="Vykopávání zakladové desky pomocí bagru - realizace společností AD Podlady"
                             className="w-full md:min-w-[200px] md:max-w-[450px] md:max-h-[450px] object-cover rounded-md"
@@ -150,6 +171,10 @@ const Content = () => {
                             <Img
                             width={350}
                             height={350}
+                            onClick={() => {
+                                setImgIndex(2);
+                                setToClosed(false);
+                            }}
                             src="/fota/podstranky/zakladove-desky/zakladove-desky-3.jpeg"
                             alt="Vykopání díry pro kanaliuace k základové desce - realizace společností AD Podlady"
                             className="w-full md:min-w-[300px] md:max-w-[350px] md:max-h-[350px] object-cover rounded-md"
@@ -162,6 +187,16 @@ const Content = () => {
             <About />
             <Contact />
             <Footer />
+            {
+                imgIndex !== null && !isClosed && (
+                    <SwipeSlider
+                    src={images}
+                    startIndex={imgIndex ?? 0}
+                    isClosed={isClosed}
+                    setToClosed={setToClosed}
+                    />
+                )
+            }
         </Fragment>
     );
 };

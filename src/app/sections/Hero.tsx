@@ -15,6 +15,7 @@ import HeroSubheading from "../components/HeroSubheading";
 import YAnimation from "../components/YAnimation";
 import YouTube from "../components/Youtube";
 import HashLess from "../components/HashLess";
+import DottedButton from "../components/DottedButton";
 
 const Hero = () => {
     return (
@@ -40,7 +41,7 @@ const Hero = () => {
                             </HeroSubheading>
                         </Padding>
                         <Wrapper className="p-2.5 md:p-3 lg:p-4 w-full md:w-max flex justify-center items-center flex-col md:flex-row gap-2 md:gap-3 lg:gap-4">
-                            {[
+                            {/* {[
                                 {
                                     href: "https://youtube.com/@adpodlahy",
                                     text: "Podívat se naše videa"
@@ -71,6 +72,10 @@ const Hero = () => {
                                                                 <YouTube />
                                                                 {text}
                                                             </Wrapper>
+                                                            <DottedButton href>
+                                                                <YouTube />
+                                                                {text}
+                                                            </DottedButton>
                                                         </Fragment>
                                                     ) : (
                                                         <Fragment>
@@ -82,7 +87,18 @@ const Hero = () => {
                                         </YAnimation>
                                     </Fragment>
                                 );
-                            })}
+                            })} */}
+                            <DottedButton href="https://youtube.com/@adpodlahy" className="w-full md:min-w-[300px] flex justify-center items-center gap-2 md:gap-2.5 lg:gap-3">
+                                <YouTube />
+                                Podívat se na naše videa
+                            </DottedButton>
+                            <YAnimation className="w-full md:min-w-[300px] rounded-2xl p-3 md:p-4 lg:p-4.5 bg-[#270c86] font-semibold cursor-pointer cta-component">
+                                <Link
+                                href="#kontakt"
+                                onClick={(e) => HashLess(e, "kontakt")}>
+                                    Domluvit Konzultaci
+                                </Link>
+                            </YAnimation>
                         </Wrapper>
                     </OverlayWrapper>
                 </Padding>

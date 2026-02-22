@@ -6,6 +6,7 @@ import clsx from "clsx";
 
 type ImageType = {
     className?: string;
+    id?: string
     fill?: boolean;
     width?: number;
     height?: number;
@@ -13,18 +14,27 @@ type ImageType = {
     alt: string;
     loading?: "eager" | "lazy";
     style?: React.CSSProperties;
+    draggable?: boolean;
+
+    onClick?: () => void;
+    onLoad?: () => void;
 };
 
 const Img = ({ ...props }: ImageType) => {
     const {
         className,
+        id,
         fill,
         width,
         height,
         src,
         alt,
         loading,
-        style
+        style,
+        draggable,
+
+        onClick,
+        onLoad
     } = props;
 
     return (
@@ -42,6 +52,12 @@ const Img = ({ ...props }: ImageType) => {
                 )
             }
             style={style}
+            draggable={draggable}
+
+            onClick={onClick}
+            onLoad={onLoad}
+
+            id={id}
             className={clsx(className, "image-component")}
             />
         </Fragment>
