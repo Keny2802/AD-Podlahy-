@@ -23,8 +23,8 @@ import Footer from "@/app/sections/Footer";
 import SwipeSlider from "@/app/components/SwipeSlider";
 
 const images = [
-    "/fota/sekce/vozovy-park/vozovy-park-4-technicke-listy-1.jpg",
-    "/fota/sekce/vozovy-park/vozovy-park-4-technicke-listy-2.jpg",
+    "/fota/sekce/vozovy-park/vozovy-park-6-technicke-listy-1.jpg",
+    "/fota/sekce/vozovy-park/vozovy-park-6-technicke-listy-2.jpg",
 ];
 
 const Content = () => {

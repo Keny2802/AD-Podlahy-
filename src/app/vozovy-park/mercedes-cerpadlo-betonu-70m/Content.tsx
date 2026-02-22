@@ -23,8 +23,8 @@ import Footer from "@/app/sections/Footer";
 import SwipeSlider from "@/app/components/SwipeSlider";
 
 const images = [
-    "/fota/sekce/vozovy-park/vozovy-park-4-technicke-listy-1.jpg",
-    "/fota/sekce/vozovy-park/vozovy-park-4-technicke-listy-2.jpg",
+    "/fota/sekce/vozovy-park/vozovy-park-5-technicke-listy-1.jpg",
+    "/fota/sekce/vozovy-park/vozovy-park-5-technicke-listy-2.jpg",
 ];
 
 const Content = () => {
@@ -75,7 +75,7 @@ const Content = () => {
                             setImgIndex(0);
                             setToClosed(false);
                         }}
-                        src="/fota/sekce/vozovy-park/vozovy-park-4-technicke-listy-1.jpg"
+                        src="/fota/sekce/vozovy-park/vozovy-park-5-technicke-listy-1.jpg"
                         alt="Mercedes Čerpadlo betonu 70 m Technické listy číslo 1 společnosti AD Podlahy"
                         className="w-full md:max-w-[400px] object-cover rounded-md"
                         />
@@ -86,7 +86,7 @@ const Content = () => {
                             setImgIndex(1);
                             setToClosed(false);
                         }}
-                        src="/fota/sekce/vozovy-park/vozovy-park-4-technicke-listy-2.jpg"
+                        src="/fota/sekce/vozovy-park/vozovy-park-5-technicke-listy-2.jpg"
                         alt="Mercedes Čerpadlo betonu 70 m Technické listy číslo 2 společnosti AD Podlahy"
                         className="w-full md:max-w-[400px] object-cover rounded-md"
                         />
