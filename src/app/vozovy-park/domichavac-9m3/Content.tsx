@@ -27,7 +27,7 @@ const Content = () => {
                        Domíchávač Man 9 m³
                     </Heading>
                     <BodyText>
-                        Přečtěte si 4 důležité informace o tomto voze.
+                        Přečtěte si 5 důležitých informací o tomto voze.
                     </BodyText>
                 </FlexCol>
                 <MarginTop>
@@ -37,6 +37,7 @@ const Content = () => {
                                 `Podvozek: MAN nákladní podvozek 4 nápravový.`,
                                 `Objem betonové nádrže: 9 m³.`,
                                 `Délka vozu: 9 m.`,
+                                `Šířka vozu: 2,55 m`,
                                 `Emisní norma motoru: Euro 5.`
                             ].map((textBlock, index) => {
                                 return (
