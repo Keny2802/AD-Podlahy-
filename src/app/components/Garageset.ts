@@ -32,22 +32,22 @@ export const GarageSet = [
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-7.avif",
         href: "/vozovy-park/domichavac-9m3-pas-14m-1",
-        cta: "Domíchávač 9 m³ pás 14m"
+        cta: "Domíchávač 9 m³ pás 14 m"
     },
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-8-1.avif",
         href: "/vozovy-park/domichavac-9m3-pas-14m-2",
-        cta: "Domíchávač 9 m³ pás 14m"
+        cta: "Domíchávač 9 m³ pás 14 m"
     },
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-9.avif",
         href: "/vozovy-park/domichavac-9m3-pas-17m-1",
-        cta: "Domíchávač 9 m³ pás 17m"
+        cta: "Domíchávač 9 m³ pás 17 m"
     },
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-10.avif",
         href: "/vozovy-park/domichavac-9m3-pas-17m-2",
-        cta: "Domíchávač 9 m³ pás 17m"
+        cta: "Domíchávač 9 m³ pás 17 m"
     },
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-11.avif",

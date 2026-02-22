@@ -24,7 +24,7 @@ const Content = () => {
             <Section color="secondary">
                 <FlexCol className="justify-center items-center text-center gap-2.5 md:gap-3 lg:gap-4">
                     <Heading>
-                       Domíchávač Mercedes 9 m³ pás 14m
+                       Domíchávač Mercedes 9 m³ pás 14 m
                     </Heading>
                     <BodyText>
                         Přečtěte si 8 důležitých informací o tomto voze.
