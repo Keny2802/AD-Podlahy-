@@ -58,7 +58,7 @@ const Img = ({ ...props }: ImageType) => {
             onLoad={onLoad}
 
             id={id}
-            className={clsx(className, "image-component")}
+            className={clsx(className, "cursor-pointer image-component")}
             />
         </Fragment>
     );
