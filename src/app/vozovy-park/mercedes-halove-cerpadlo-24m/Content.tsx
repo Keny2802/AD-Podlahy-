@@ -71,7 +71,7 @@ const Content = () => {
                         width={400}
                         height={400}
                         onClick={() => {
-                            setImgIndex(3);
+                            setImgIndex(0);
                             setToClosed(false);
                         }}
                         src="/fota/sekce/vozovy-park/vozovy-park-1-technicke-listy.jpg"
