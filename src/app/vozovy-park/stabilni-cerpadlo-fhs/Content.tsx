@@ -35,15 +35,15 @@ const Content = () => {
                         <Grid className="grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
                             {[
                                 `Typ čerpadla: stabilní betonové čerpadlo FHS.`,
-                                `Výkon čerpadla: cca 90 - 130 m³ / h (dle konfigurace).`,
+                                `Výkon čerpadla: až 15 m³ / h.`,
                                 `Maximální čerpací tlak: až 80 - 100 bar.`,
-                                `Průměr betonového potrubí: DN 125 mm / DN 150 mm.`,
-                                `Maximální výška čerpání: cca 25 - 30 m.`,
-                                `Maximální vodorovný dosah: cca 120 - 200 m.`,
+                                `Průměr betonového potrubí: DN 40 mm.`,
+                                `Maximální výška čerpání: až 100 m.`,
+                                `Maximální vodorovný dosah: až 200 m.`,
                                 `Stabilizace: pevná konstrukce na podstavci s možností kotvení do země.`,
-                                `Typ čerpadla: dvoupístové hydraulické s S - ventilem.`,
-                                `Motor: dieselový, výkon dle konfigurace čerpadla.`,
-                                `Použití: betonáž hal, průmyslových objektů a větších staveb.`
+                                `Typ čerpadla: šnekové hydraulické.`,
+                                `Motor: Deutz o výkonu 38,8 kW.`,
+                                `Použití: pro vylévání litých směsí jako je Anhydrit a litý Cementový potěr.`
                             ].map((textBlock, index) => {
                                 return (
                                     <ListItem key={index}>

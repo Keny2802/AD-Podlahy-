@@ -24,7 +24,7 @@ const Content = () => {
             <Section color="secondary">
                 <FlexCol className="justify-center items-center text-center gap-2.5 md:gap-3 lg:gap-4">
                     <Heading>
-                       Stabilní čerpadlo P718
+                       Stabilní čerpadlo P 718
                     </Heading>
                     <BodyText>
                         Přečtěte si 10 důležitých informací o tomto voze.
@@ -34,12 +34,12 @@ const Content = () => {
                     <List>
                         <Grid className="grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
                             {[
-                                `Typ čerpadla: stabilní betonové čerpadlo P718.`,
-                                `Výkon čerpadla: cca 70 - 100 m³ / h (dle konfigurace).`,
-                                `Maximální čerpací tlak: až 70 - 90 bar.`,
-                                `Průměr betonového potrubí: DN 100 mm / DN 125 mm.`,
-                                `Maximální výška čerpání: cca 18 - 20 m.`,
-                                `Maximální vodorovný dosah: cca 100 - 150 m.`,
+                                `Typ čerpadla: stabilní betonové čerpadlo P 718.`,
+                                `Výkon čerpadla: cca 17 - 17,4 m³ / h (dle konfigurace).`,
+                                `Maximální čerpací tlak: 68 bar.`,
+                                `Průměr betonového potrubí: DN 80 mm.`,
+                                `Maximální výška čerpání: až 100 m.`,
+                                `Maximální vodorovný dosah: až 300 m.`,
                                 `Stabilizace: pevná konstrukce na podstavci s možností kotvení do země.`,
                                 `Typ čerpadla: dvoupístové hydraulické s S - ventilem.`,
                                 `Motor: dieselový, výkon dle konfigurace čerpadla.`,

@@ -36,7 +36,7 @@ const images = [
 
 const Content = () => {
     const [imgIndex, setImgIndex] = useState<number | null>(0);
-    const [isClosed, setToClosed] = useState<boolean>(false);
+    const [isClosed, setToClosed] = useState<boolean>(true);
 
     return (
         <Fragment>

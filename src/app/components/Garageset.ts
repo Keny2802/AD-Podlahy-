@@ -62,7 +62,7 @@ export const GarageSet = [
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-13.avif",
         href: "/vozovy-park/stabilni-cerpadlo-p718",
-        cta: "Stabilní čerpadlo P718"
+        cta: "Stabilní čerpadlo P 718"
     },
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-14.avif",
