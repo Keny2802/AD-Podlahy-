@@ -27,23 +27,17 @@ const Content = () => {
                        Domíchávač Man 12 m³
                     </Heading>
                     <BodyText>
-                        Přečtěte si 10 důležitých informací o tomto voze.
+                        Přečtěte si 4 důležité informace o tomto voze.
                     </BodyText>
                 </FlexCol>
                 <MarginTop>
                     <List>
                         <Grid className="grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
                             {[
-                                `Podvozek: MAN nákladní podvozek 4 - 5 nápravový.`,
+                                `Podvozek: MAN nákladní podvozek 4 nápravový.`,
                                 `Objem betonové nádrže: 12 m³.`,
-                                `Délka pásu: 14 - 17 m (hydraulický posuv pásu, dle konfigurace).`,
-                                `Výkon čerpadla: cca 60 - 90 m³ / h (dle konfigurace čerpací jednotky).`,
-                                `Maximální čerpací tlak: až 70 - 90 bar.`,
-                                `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
-                                `Průměr betonového potrubí: DN 125 mm / DN 150 mm.`,
-                                `Maximální výška čerpání: cca 14 - 17 m (dle délky pásu).`,
-                                `Stabilizace: hydraulické výsuvné opěry s mechanickým nebo elektronickým řízením.`,
-                                `Emisní norma motoru: Euro 6 (dle roku výroby a konfigurace).`
+                                `Délka vozu: 9 m.`,
+                                `Emisní norma motoru: Euro 6.`
                             ].map((textBlock, index) => {
                                 return (
                                     <ListItem key={index}>
