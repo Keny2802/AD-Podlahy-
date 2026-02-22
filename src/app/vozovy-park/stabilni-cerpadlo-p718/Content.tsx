@@ -35,14 +35,14 @@ const Content = () => {
                         <Grid className="grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
                             {[
                                 `Typ čerpadla: stabilní betonové čerpadlo P 718.`,
-                                `Výkon čerpadla: cca 17 - 17,4 m³ / h (dle konfigurace).`,
-                                `Maximální čerpací tlak: 68 bar.`,
+                                `Výkon čerpadla: cca 4 - 17,4 m³ / h (dle konfigurace).`,
+                                `Maximální čerpací tlak: až 68 - 70 bar.`,
                                 `Průměr betonového potrubí: DN 80 mm.`,
-                                `Maximální výška čerpání: až 100 m.`,
-                                `Maximální vodorovný dosah: až 300 m.`,
+                                `Maximální výška čerpání: až 50 m.`,
+                                `Maximální vodorovný dosah: až 100 m.`,
                                 `Stabilizace: pevná konstrukce na podstavci s možností kotvení do země.`,
                                 `Typ čerpadla: dvoupístové hydraulické s S - ventilem.`,
-                                `Motor: Deutz o výkonu 38,8 kW.`,
+                                `Motor: 3 válcový dieselový motor Deutz 34,5 kW.`,
                                 `Použití: betonáž rodinných domů, menších hal a průmyslových objektů.`
                             ].map((textBlock, index) => {
                                 return (

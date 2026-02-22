@@ -38,11 +38,11 @@ const Content = () => {
                                 `Výkon čerpadla: až 15 m³ / h.`,
                                 `Maximální čerpací tlak: až 80 - 100 bar.`,
                                 `Průměr betonového potrubí: DN 40 mm.`,
-                                `Maximální výška čerpání: až 100 m.`,
-                                `Maximální vodorovný dosah: až 200 m.`,
+                                `Maximální výška čerpání: až 30 m.`,
+                                `Maximální vodorovný dosah: až 100 m.`,
                                 `Stabilizace: pevná konstrukce na podstavci s možností kotvení do země.`,
                                 `Typ čerpadla: šnekové hydraulické.`,
-                                `Motor: Deutz o výkonu 38,8 kW.`,
+                                `Motor: 3 válcový dieselový motor Deutz 34,5 kW.`,
                                 `Použití: pro vylévání litých směsí jako je Anhydrit a litý Cementový potěr.`
                             ].map((textBlock, index) => {
                                 return (
