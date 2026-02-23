@@ -10,7 +10,7 @@ import Header from "@/app/components/Header";
 import Section from "@/app/components/Section";
 import FlexCol from "@/app/components/FlexCol";
 import Heading from "@/app/components/Heading";
-import BodyText from "@/app/components/BodyText";
+import SubHeadingCounter from "@/app/components/SubHeadingCounter";
 import MarginTop from "@/app/components/MarginTop";
 import Flex from "@/app/components/Flex";
 import Grid from "@/app/components/Grid";
@@ -27,6 +27,19 @@ const images = [
     "/fota/sekce/vozovy-park/vozovy-park-6-technicke-listy-2.jpg",
 ];
 
+const textList = [
+    `Podvozek: Scania nákladní podvozek 4 nápravový.`,
+    `Objem betonové nádrže: 7 m³.`,
+    `Dosah výložníku: 28 m (4 dílné hydraulické výložní rameno).`,
+    `Výkon čerpadla: 81 m³ / h.`,
+    `Maximální čerpací tlak: až 81 bar.`,
+    `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
+    `Průměr betonového potrubí: DN 100 mm.`,
+    `Maximální výška čerpání: 28 m.`,
+    `Stabilizace: hydraulické výsuvné opěry s elektronickým řízením.`,
+    `Emisní norma motoru: Euro 6.`
+];
+
 const Content = () => {
     const [imgIndex, setImgIndex] = useState<number | null>(0);
     const [isClosed, setToClosed] = useState<boolean>(true);
@@ -40,32 +53,21 @@ const Content = () => {
                     <Heading>
                         Scania Pumi 7 m³ 28 m
                     </Heading>
-                    <BodyText>
-                        Přečtěte si 10 důležitých informací o tomto voze.
-                    </BodyText>
+                    <SubHeadingCounter set={textList} />
                 </FlexCol>
                 <MarginTop>
                     <Flex className="justify-center flex-col gap-2 md:gap-4 lg:gap-6">
                         <List>
                             <Grid className="grid-cols-1 gap-2.5 md:gap-3 lg:gap-4">
-                                {[
-                                    `Podvozek: Scania nákladní podvozek 4 nápravový.`,
-                                    `Objem betonové nádrže: 7 m³.`,
-                                    `Dosah výložníku: 28 m (4 dílné hydraulické výložní rameno).`,
-                                    `Výkon čerpadla: 81 m³ / h.`,
-                                    `Maximální čerpací tlak: až 81 bar.`,
-                                    `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
-                                    `Průměr betonového potrubí: DN 100 mm.`,
-                                    `Maximální výška čerpání: 28 m.`,
-                                    `Stabilizace: hydraulické výsuvné opěry s elektronickým řízením.`,
-                                    `Emisní norma motoru: Euro 6.`
-                                ].map((textBlock, index) => {
+                                {
+                                textList.map((textBlock, index) => {
                                     return (
                                         <ListItem key={index}>
                                             {textBlock}
                                         </ListItem>
                                     );
-                                })}
+                                })
+                                }
                             </Grid>
                         </List>
                         <Img

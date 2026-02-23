@@ -10,7 +10,7 @@ import Header from "@/app/components/Header";
 import Section from "@/app/components/Section";
 import FlexCol from "@/app/components/FlexCol";
 import Heading from "@/app/components/Heading";
-import BodyText from "@/app/components/BodyText";
+import SubHeadingCounter from "@/app/components/SubHeadingCounter";
 import MarginTop from "@/app/components/MarginTop";
 import Flex from "@/app/components/Flex";
 import Grid from "@/app/components/Grid";
@@ -24,7 +24,21 @@ import SwipeSlider from "@/app/components/SwipeSlider";
 
 const images = [
     "/fota/sekce/vozovy-park/vozovy-park-1-technicke-listy.jpg"
-]
+];
+
+const textList = [
+    `Podvozek: Mercedes-Benz nákladní podvozek 3 nápravový.`,
+    `Váha stroje: 26 000 Kg.`,
+    `Dosah ramene: 24 m (4 dílné hydraulické výložní rameno).`,
+    `Výkon čerpadla: 140 m³ / h.`,
+    // `Čerpací tlak: až 80 bar.`,
+    `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo.`,
+    `Průměr potrubí: standardně DN 125 mm.`,
+    `Výška čerpání: 24 m.`,
+    `Délka vodorovného čerpání: 20 m.`,
+    `Stabilizace: hydraulické výsuvné opěry.`,
+    `Emisní norma motoru: Euro 6.`
+];
 
 const Content = () => {
     const [imgIndex, setImgIndex] = useState<number | null>(0);
@@ -39,32 +53,21 @@ const Content = () => {
                     <Heading>
                         Mercedes Halové čerpadlo 24 m
                     </Heading>
-                    <BodyText>
-                        Přečtěte si 10 důležitých informací o tomto voze.
-                    </BodyText>
+                    <SubHeadingCounter set={textList} />
                 </FlexCol>
                 <MarginTop>
                     <Flex className="justify-center flex-col gap-2 md:gap-4 lg:gap-6">
                         <List>
                             <Grid className="grid-cols-1 md:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
-                                {[
-                                    `Podvozek: Mercedes-Benz nákladní podvozek 3 nápravový.`,
-                                    `Dosah ramene: 24 m (4 dílné hydraulické výložní rameno).`,
-                                    `Výkon čerpadla: 140 m³ / h.`,
-                                    `Čerpací tlak: až 80 bar.`,
-                                    `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo.`,
-                                    `Průměr potrubí: standardně DN 125 mm.`,
-                                    `Výška čerpání: 24 m.`,
-                                    `Délka vodorovného čerpání: 20 m.`,
-                                    `Stabilizace: hydraulické výsuvné opěry.`,
-                                    `Emisní norma motoru: Euro 6.`
-                                ].map((textBlock, index) => {
+                                {
+                                textList.map((textBlock, index) => {
                                     return (
                                         <ListItem key={index}>
                                             {textBlock}
                                         </ListItem>
                                     );
-                                })}
+                                })
+                                }
                             </Grid>
                         </List>
                         <Img

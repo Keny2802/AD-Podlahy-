@@ -10,7 +10,7 @@ import Header from "@/app/components/Header";
 import Section from "@/app/components/Section";
 import FlexCol from "@/app/components/FlexCol";
 import Heading from "@/app/components/Heading";
-import BodyText from "@/app/components/BodyText";
+import SubHeadingCounter from "@/app/components/SubHeadingCounter";
 import MarginTop from "@/app/components/MarginTop";
 import Flex from "@/app/components/Flex";
 import Grid from "@/app/components/Grid";
@@ -27,6 +27,20 @@ const images = [
     "/fota/sekce/vozovy-park/vozovy-park-4-technicke-listy-2.jpg",
 ];
 
+const textList = [
+    `Podvozek: Volvo nákladní podvozek 5 nápravový.`,
+    `Váha stroje: 48 000 Kg.`,
+    `Dosah výložníku: 56 m (6 dílné hydraulické výložní rameno).`,
+    `Výkon čerpadla: 180 m³ / h.`,
+    // `Maximální čerpací tlak: 113 bar.`,
+    `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo.`,
+    `Průměr betonového potrubí: DN 125 mm.`,
+    `Maximální výška čerpání: 56 m.`,
+    `Maximální vodorovný dosah: 51 m.`,
+    `Stabilizace: hydraulické výsuvné opěry s elektronickým řízením a bezpečnostními senzory.`,
+    `Emisní norma motoru: Euro 6.`
+];
+
 const Content = () => {
     const [imgIndex, setImgIndex] = useState<number | null>(0);
     const [isClosed, setToClosed] = useState<boolean>(true);
@@ -40,32 +54,21 @@ const Content = () => {
                     <Heading>
                         Volvo čerpadlo na beton 56 m
                     </Heading>
-                    <BodyText>
-                        Přečtěte si 10 důležitých informací o tomto voze.
-                    </BodyText>
+                    <SubHeadingCounter set={textList} />
                 </FlexCol>
                 <MarginTop>
                     <Flex className="justify-center flex-col gap-2 md:gap-4 lg:gap-6">
                         <List>
                             <Grid className="grid-cols-1 gap-2.5 md:gap-3 lg:gap-4">
-                                {[
-                                    `Podvozek: Volvo nákladní podvozek 5 nápravový.`,
-                                    `Dosah výložníku: 56 m (6 dílné hydraulické výložní rameno).`,
-                                    `Výkon čerpadla: 180 m³ / h.`,
-                                    `Maximální čerpací tlak: 113 bar.`,
-                                    `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
-                                    `Průměr betonového potrubí: DN 125 mm.`,
-                                    `Maximální výška čerpání: 56 m.`,
-                                    `Maximální vodorovný dosah: 51 m.`,
-                                    `Stabilizace: hydraulické výsuvné opěry s elektronickým řízením a bezpečnostními senzory.`,
-                                    `Emisní norma motoru: Euro 6.`
-                                ].map((textBlock, index) => {
+                                {
+                                textList.map((textBlock, index) => {
                                     return (
                                         <ListItem key={index}>
                                             {textBlock}
                                         </ListItem>
                                     );
-                                })}
+                                })
+                                }
                             </Grid>
                         </List>
                         <Img

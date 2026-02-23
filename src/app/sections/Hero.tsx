@@ -41,54 +41,9 @@ const Hero = () => {
                             </HeroSubheading>
                         </Padding>
                         <Wrapper className="p-2.5 md:p-3 lg:p-4 w-full md:w-max flex justify-center items-center flex-col md:flex-row gap-2 md:gap-3 lg:gap-4">
-                            {/* {[
-                                {
-                                    href: "https://youtube.com/@adpodlahy",
-                                    text: "Podívat se naše videa"
-                                },
-                                {
-                                    href: "kontakt",
-                                    text: "Domluvit Konzultaci"
-                                },
-                            ].map((card, index) => {
-                                const {
-                                    href,
-                                    text
-                                } = card;
-
-                                return (
-                                    <Fragment key={index}>
-                                        <YAnimation className="w-full md:min-w-[200px] rounded-2xl whitespace-nowrap p-3 md:p-4 lg:p-6 first:bg-[#c72026] last:bg-[#270c86] cursor-pointer cta-component">
-                                            <Link
-                                                href={href}
-                                                target={index === 0 ? "_blank" : "false"}
-                                                onClick={(e) => {
-                                                    index === 1 && HashLess(e, href)
-                                                }}>
-                                                {
-                                                    index === 0 ? (
-                                                        <Fragment>
-                                                            <Wrapper className="flex justify-center items-center gap-2 md:gap-2.5 lg:gap-3">
-                                                                <YouTube />
-                                                                {text}
-                                                            </Wrapper>
-                                                            <DottedButton href>
-                                                                <YouTube />
-                                                                {text}
-                                                            </DottedButton>
-                                                        </Fragment>
-                                                    ) : (
-                                                        <Fragment>
-                                                            {text}
-                                                        </Fragment>
-                                                    )
-                                                }
-                                            </Link>
-                                        </YAnimation>
-                                    </Fragment>
-                                );
-                            })} */}
-                            <DottedButton href="https://youtube.com/@adpodlahy" className="w-full md:min-w-[300px] flex justify-center items-center gap-2 md:gap-2.5 lg:gap-3">
+                            <DottedButton
+                            href="https://youtube.com/@adpodlahy"
+                            className="w-full md:min-w-[300px] flex justify-center items-center gap-2 md:gap-2.5 lg:gap-3">
                                 <YouTube />
                                 Podívat se na naše videa
                             </DottedButton>
