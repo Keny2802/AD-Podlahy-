@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 const Page = () => {
     return (
         <Fragment>
-            <Content />
+            <Content key={1} />
         </Fragment>
     );
 };

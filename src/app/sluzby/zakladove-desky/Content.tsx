@@ -28,6 +28,7 @@ import SwipeSlider from "@/app/components/SwipeSlider";
 const images = [
     "/fota/podstranky/zakladove-desky/zakladove-desky-1.jpeg",
     "/fota/podstranky/zakladove-desky/zakladove-desky-2.jpeg",
+    "/fota/podstranky/zemni-prace/zemni-prace-2.jpeg",
     "/fota/podstranky/zakladove-desky/zakladove-desky-3.jpeg"
 ]
 
@@ -145,7 +146,7 @@ const Content = () => {
                             <SmallerHeading>
                                 🏗️ Stavíte dům? Začněte od pořádných základů! Realizujeme betonové základové desky pro rodinné domy, chaty i garáže.
                             </SmallerHeading>
-                            <MarginTop>
+                            {/* <MarginTop>
                                 <List className="ml-4 md:ml-6 lg:ml-12 max-w-3xl">
                                     <FlexCol className="gap-1.5 md:gap-2 lg:gap-2.5">
                                         {
@@ -165,6 +166,19 @@ const Content = () => {
                                         }
                                     </FlexCol>
                                 </List>
+                            </MarginTop> */}
+                            <MarginTop>
+                                <Img
+                                width={600}
+                                height={600}
+                                onClick={() => {
+                                    setImgIndex(2);
+                                    setToClosed(false);
+                                }}
+                                src="/fota/podstranky/zemni-prace/zemni-prace-2.jpeg"
+                                alt="Vykopání zemní díry pro výstavbu zákládové desky - realizace společností AD Podlady"
+                                className="w-full md:min-w-[450px] md:max-w-[600px] md:max-h-[350px] object-cover rounded-md"
+                                />
                             </MarginTop>
                         </Wrapper>
                         <YAnimation className="w-full md:min-w-[300px] md:max-w-[350px] md:max-h-[350px] cursor-pointer">
@@ -172,11 +186,11 @@ const Content = () => {
                             width={350}
                             height={350}
                             onClick={() => {
-                                setImgIndex(2);
+                                setImgIndex(3);
                                 setToClosed(false);
                             }}
                             src="/fota/podstranky/zakladove-desky/zakladove-desky-3.jpeg"
-                            alt="Vykopání díry pro kanaliuace k základové desce - realizace společností AD Podlady"
+                            alt="Vykopání díry pro kanalizaci k základové desce - realizace společností AD Podlady"
                             className="w-full md:min-w-[300px] md:max-w-[350px] md:max-h-[350px] object-cover rounded-md"
                             />
                         </YAnimation>

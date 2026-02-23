@@ -20,8 +20,8 @@ const textList = [
     `Podvozek: MAN nákladní podvozek 4 nápravový.`,
     `Objem betonové nádrže: 9 m³.`,
     `Délka pásu: 17 m (hydraulický posuv pásu).`,
-    // `Výkon čerpadla: cca 50 - 80 m³ / h (dle konfigurace čerpací jednotky).`,
-    `Maximální čerpací tlak: až 60 - 80 bar.`,
+    `Výkon čerpadla: cca 50 - 80 m³ / h (dle konfigurace čerpací jednotky).`,
+    // `Maximální čerpací tlak: až 60 - 80 bar.`,
     `Maximální výška čerpání: cca 6 - 8 m.`,
     `Stabilizace: hydraulické výsuvné opěry s mechanickým nebo elektronickým řízením.`,
     `Emisní norma motoru: Euro 3.`

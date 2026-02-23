@@ -32,7 +32,7 @@ const textList = [
     `Objem betonové nádrže: 7 m³.`,
     `Dosah výložníku: 28 m (4 dílné hydraulické výložní rameno).`,
     `Výkon čerpadla: 81 m³ / h.`,
-    `Maximální čerpací tlak: až 81 bar.`,
+    `Maximální tlak: až 81 bar.`,
     `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
     `Průměr betonového potrubí: DN 100 mm.`,
     `Maximální výška čerpání: 28 m.`,

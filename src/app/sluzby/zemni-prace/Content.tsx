@@ -15,6 +15,8 @@ import MarginTop from "@/app/components/MarginTop";
 import Grid from "@/app/components/Grid";
 import YAnimation from "@/app/components/YAnimation";
 import Img from "@/app/components/Img";
+import List from "@/app/components/List";
+import ListItem from "@/app/components/ListItem";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
@@ -89,21 +91,50 @@ const Content = () => {
                         {
                             images.map((image, index) => {
                                 return (
-                                    <YAnimation
-                                    key={index}
-                                    className="w-full min-h-[300px] max-h-[300px] cursor-pointer">
-                                        <Img
-                                        width={500}
-                                        height={500}
-                                        src={image}
-                                        onClick={() => {
-                                            setImgIndex(index);
-                                            setToClosed(false);
-                                        }}
-                                        alt={`${index + 1}. Ukázka z realizace zemních prací společnosti AD podlahy.`}
-                                        className="w-full min-h-[300px] max-h-[300px] rounded-2xl object-cover cursor-pointer"
-                                        />
-                                    </YAnimation>
+                                    <Fragment>
+                                        {
+                                            index !== 1 ? (
+                                                <YAnimation
+                                                key={index}
+                                                className="w-full min-h-[300px] max-h-[300px] cursor-pointer">
+                                                <Img
+                                                width={500}
+                                                height={500}
+                                                src={image}
+                                                onClick={() => {
+                                                    setImgIndex(index);
+                                                    setToClosed(false);
+                                                }}
+                                                    alt={`${index + 1}. Ukázka z realizace zemních prací společnosti AD podlahy.`}
+                                                    className="w-full min-h-[300px] max-h-[300px] rounded-2xl object-cover cursor-pointer"
+                                                    />
+                                                </YAnimation>
+                                            ) : (
+                                                <MarginTop>
+                                                    <List className="ml-2">
+                                                        <FlexCol className="gap-1.5 md:gap-2 lg:gap-2.5">
+                                                            {
+                                                                [
+                                                                    `✅ Zaměření a nacenění ZDARMA.`,
+                                                                    `✅ Profesionální přístup a dodržení termínů.`,
+                                                                    `✅ Působíme v kraji Zlínský a Moravsko Slezský.`,
+                                                                    `👇 Napište nám do zpráv a získejte kalkulaci.`
+                                                                ].map((textBlock, index) => {
+                                                                    return (
+                                                                        <ListItem
+                                                                        key={index}
+                                                                        className="max-w-[650px]">
+                                                                            {textBlock}
+                                                                        </ListItem>
+                                                                    );
+                                                                })
+                                                            }
+                                                        </FlexCol>
+                                                    </List>
+                                                </MarginTop>
+                                            )
+                                        }
+                                    </Fragment>
                                 );
                             })
                         }

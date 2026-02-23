@@ -28,9 +28,9 @@ const images = [
 ];
 
 const textList = [
-    `Podvozek: MAN nákladní podvozek 4 nápravový.`,
-    `Dosah výložníku: 50 m (6 dílné hydraulické výložní rameno).`,
+    `Podvozek: Mercedes nákladní podvozek 4 nápravový.`,
     `Váha stroje: 38 000 Kg.`,
+    `Dosah výložníku: 50 m (6 dílné hydraulické výložní rameno).`,
     `Výkon čerpadla: 170 m³ / h.`,
     // `Maximální čerpací tlak: až 85 bar`,
     `Typ čerpadla: dvoupístové hydraulické betonové čerpadlo s S - ventilem.`,
