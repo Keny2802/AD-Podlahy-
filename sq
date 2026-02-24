@@ -1,0 +1,143 @@
+[33mcommit e3f2d1dd4911c7a725fe276cf94480dae5c46eab[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Tue Feb 24 16:44:12 2026 +0100
+
+    Přidal jsem podstránky a přidal texty.
+    
+    - Přidal jsem podstránky OBCHODNÍ PODMÍNKY, OCHRANA OSOBNÍCH ÚDAJŮ, NASTAVENÍ COOKIES.
+    
+    -Přidal jsem do těchto podstránek textace.
+
+[33mcommit 030e82891d28bcd6a3cef5db074dc1c778e86203[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Tue Feb 24 14:51:21 2026 +0100
+
+    Změna RESEND Credentials
+    
+    Změnil jsem RESEND credentials, změna kontaktní emailové adresy z formuláře.
+
+[33mcommit 5fb13e9a387a7084b60f13001a029be81c3a0ad3[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Tue Feb 24 03:32:44 2026 +0100
+
+    Přidané podstránky [obchodní podmínky, ochrana osobních údajů, nastavení cookies].
+
+[33mcommit 84cff58907905fa31319ce9c445ad46bc2b0635e[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Tue Feb 24 00:35:52 2026 +0100
+
+    Úprava a změna textu v podstránkách vozového parku.
+
+[33mcommit b6793838f527ec18c3e0720dc9a2b9f02067eb20[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Mon Feb 23 03:45:02 2026 +0100
+
+    Úprava a změna textů v podstránkách vozového parku a vytvoření komponenty pro Subheading dynamické počítání textových položek v jednotlivých podstránkách vozového parku.
+
+[33mcommit b2b7e0872ab4368b0bdb9e371fa1bd468b57e684[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 14:22:39 2026 +0100
+
+    Úprava a změna textu v 'Stabilní čerpadlo P 718' & 'Stabilní čerpadlo FHS'.
+
+[33mcommit b77fe922d8b88022153d765eb4a9a905cf420c31[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 14:11:29 2026 +0100
+
+    Změna a úprava textu v Stabilní čerpadlo P 718.
+
+[33mcommit fa7b148f7439e81f39b29d0ab0dd33791e60c33a[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 13:19:50 2026 +0100
+
+    Úprava textů v podstránkách vozového parku a oprava isClosed statu v podstránkách služby.
+
+[33mcommit 83bfa9c80cd86dda45133a31493186f8fe18ff8d[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 12:59:46 2026 +0100
+
+    Oprava isClosed statu pro nezobrazování instatně Swipe Slider komponenty.L
+
+[33mcommit 26fb8aaa6c959b091921725878448261d5f8cb81[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 12:47:12 2026 +0100
+
+    Změna a úprava textu vozového parku [Domíchávač MAN 9 m³ pás 17 m, Domíchávač Man 9 m³ pás 17 m, Domíchávač Man 9 m³, Domíchávač Man 12 m³].
+
+[33mcommit 9888415be4901385deb43c9f140f20dfc59e8c32[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 12:38:10 2026 +0100
+
+    Přidání textu do Domíchávač Mercedes 9 m³ pás 14 m & Domíchávač MAN 9 m³ pás 17 m (1) & Domíchávač Man 9 m³ pás 17 m (2).
+
+[33mcommit f208a15c3859f1413864a725a6d50e18ba8587f2[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 12:31:38 2026 +0100
+
+    Změna a úprava textu v Domíchávač MAN 9 m³ pás 14m & Domíchávač Mercedes 9 m³ pás 14m.
+
+[33mcommit 0a4d1bc08ee28b10faaee94b877da2b9827fc816[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 12:22:49 2026 +0100
+
+    Přidání technické listy do Scania Pumi 7 m³ 28 m.
+
+[33mcommit f0cee891b600e91dc73a4ec806472043e596aeab[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 12:13:24 2026 +0100
+
+    Přidání technické listy do Mercedes Čerpadlo betonu 70 m.
+
+[33mcommit fd794162974e9a8996b52c59f89c43561276da84[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 12:01:20 2026 +0100
+
+    Přidání technických listů do Volvo čerpadlo na beton 56 m.
+
+[33mcommit bd9b1441313eee530d3adc4d703bfce5358153ac[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 11:50:54 2026 +0100
+
+    Přidání technických listů do Mercedes čerpadlo na beton 50 m.
+
+[33mcommit 6436a24c3ec221c0568b7e38007d2e1d8a7594d4[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 11:36:31 2026 +0100
+
+    Přidání technické listy Mercedes čerpadlo na beton 40 m.
+
+[33mcommit 9db9b56e3becfe4ac78b691f61017272493fa925[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 11:22:55 2026 +0100
+
+    Změna layoutu.
+
+[33mcommit e4baf5b92d1fa43b91f291e7be4bb4db29651826[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 11:19:47 2026 +0100
+
+    Přidání technické listy do Mercedes Halové čerpadlo 24 m.
+
+[33mcommit 392294646961b37ecca904c184ab9d4726caece0[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sun Feb 22 02:45:56 2026 +0100
+
+    Přidání Swipe Slider komponenty.
+
+[33mcommit ce8f71e18d7338b6587285c932d2ecc3661a672a[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sat Feb 21 14:37:18 2026 +0100
+
+    Smazání domychavac- adresáře pro vercel deploy.
+
+[33mcommit 8372dfba44f046b862670712b10e0694ab68ae3a[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Sat Feb 21 14:28:03 2026 +0100
+
+    Přidané podstránky vozového parku.
+
+[33mcommit a9a45acedde9e49a0aa1a2b6bd9e319a52ee945c[m
+Author: Keny2802 <oliva.vojta@gmail.com>
+Date:   Fri Feb 20 15:48:09 2026 +0100
+
+    První commit AD Podlahy.
