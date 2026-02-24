@@ -1,11 +1,26 @@
+"use client";
+
 import {
     Fragment
 } from "react";
+import {
+    useRouter
+} from "next/navigation";
 import {
     Mail,
     PhoneOutgoing,
     Map
 } from "lucide-react";
+import {
+    useForm
+} from "react-hook-form";
+import {
+    zodResolver
+} from "@hookform/resolvers/zod";
+import {
+    ContactFormSchema,
+    ContactFormProps
+} from "@/app/lib/validation";
 
 import RelativeOverlayWrapper from "../components/RelativeOverlayWrapper";
 import Wrapper from "../components/Wrapper";
@@ -21,6 +36,51 @@ import Logo from "../components/Logo";
 import HeaderLink from "../components/HeaderLink";
 
 const Contact = () => {
+    const router = useRouter();
+
+     const {
+        register,
+        handleSubmit,
+        formState: {
+            errors,
+            isSubmitting
+        },
+        reset
+    } = useForm<ContactFormProps>({
+        resolver: zodResolver(ContactFormSchema),
+        defaultValues: {
+            name: "",
+            email: "",
+            phone: "",
+            adress: "",
+            message: ""
+        }
+    });
+
+    const handleForm = async (contactFormCredentials: ContactFormProps) => {
+        try {
+            const res = await fetch("/api/contact-form", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(contactFormCredentials)
+            });
+
+            if (!res.ok) {
+                const errorCredentials = await res.json();
+                console.error("Chyba při odesílání zprávy:", errorCredentials);
+                
+                return;
+            };
+
+            router.replace("/podekovani");
+            reset();
+        } catch (catchError) {
+            console.error("Chyba při odesílání zprávy:", catchError);
+        };
+    };
+
     return (
         <Fragment>
             <RelativeOverlayWrapper
@@ -45,72 +105,85 @@ const Contact = () => {
                         type="text"
                         color="black"
                         className="bg-white text-black w-full xl:max-w-[600px] rounded-md">
-                            <Padding>
-                                <FlexCol className="items-center gap-2 md:gap-2.5 lg:gap-3">
-                                    <SmallerHeading>
-                                        Nezávazná poptávka
-                                    </SmallerHeading>
-                                    <BodyText>
-                                        Vyplňte nezávaznou poptávku. Ozveme se Vám co nejdříve.
-                                    </BodyText>
-                                </FlexCol>
-                                <FlexCol className="gap-2 md:gap-3 lg:gap-4">
-                                    <FlexCol className="mt-2 md:mt-3 lg:mt-4 gap-2 md:gap-3 lg:gap-4">
-                                        {
-                                            [
-                                                {
-                                                    inputType: "text",
-                                                    inputPlaceholder: "Jan Novák"
-                                                },
-                                                {
-                                                    inputType: "email",
-                                                    inputPlaceholder: "jan@novak.cz"
-                                                },
-                                                {
-                                                    inputType: "tel",
-                                                    inputPlaceholder: "+420 601 123 456"
-                                                },
-                                                {
-                                                    inputType: "adress",
-                                                    inputPlaceholder: "Jasenka 477, 751 01 Vsetín"
-                                                },
-                                                {
-                                                    inputType: "text-area",
-                                                    inputPlaceholder: "Napište nám zprávu."
-                                                }
-                                            ].map((input, index) => {
-                                                return (
-                                                    <Fragment key={index}>
-                                                        <Color
-                                                        type="bg"
-                                                        color="#270c86"
-                                                        className="w-full rounded-md">
-                                                            {
-                                                                input.inputType !== "text-area" ? (
-                                                                    <input
-                                                                    type={input.inputType}
-                                                                    placeholder={input.inputPlaceholder}
-                                                                    className="p-3 md:p-4 xl:p-5 w-full text-white rounded-md focus:outline-none placeholder:text-white"
-                                                                    />
-                                                                ) : (
-                                                                    <textarea
-                                                                    placeholder={input.inputPlaceholder}
-                                                                    className="p-3 md:p-4 xl:p-5 w-full min-h-[100px] resize-none text-white rounded-md focus:outline-none placeholder:text-white"
-                                                                    />
-                                                                )
-                                                            }
-                                                        </Color>
-                                                    </Fragment>
-                                                );
-                                            })
-                                        }
+                            <form
+                            onSubmit={handleSubmit(handleForm)}>
+                                <Padding>
+                                    <FlexCol className="items-center gap-2 md:gap-2.5 lg:gap-3">
+                                        <SmallerHeading>
+                                            Nezávazná poptávka
+                                        </SmallerHeading>
+                                        <BodyText>
+                                            Vyplňte nezávaznou poptávku. Ozveme se Vám co nejdříve.
+                                        </BodyText>
                                     </FlexCol>
-                                    <Button
-                                    color="bg-[#270c86] text-white">
-                                        Odeslat formulář
-                                    </Button>
-                                </FlexCol>
-                            </Padding>
+                                    <FlexCol className="gap-2 md:gap-3 lg:gap-4">
+                                        <FlexCol className="mt-2 md:mt-3 lg:mt-4 gap-2 md:gap-3 lg:gap-4">
+                                            {
+                                                [
+                                                    {
+                                                        key: "name",
+                                                        type: "text",
+                                                        placeHolder: "Jan Novák"
+                                                    },
+                                                    {
+                                                        key: "email",
+                                                        type: "email",
+                                                        placeHolder: "jan@novak.cz"
+                                                    },
+                                                    {
+                                                        key: "phone",
+                                                        type: "tel",
+                                                        placeHolder: "+420 601 123 456"
+                                                    },
+                                                    {
+                                                        key: "adress",
+                                                        type: "text",
+                                                        placeHolder: "Jasenka 477"
+                                                    },
+                                                    {
+                                                        key: "message",
+                                                        type: "textarea",
+                                                        placeHolder: "Napište nám zprávu."
+                                                    },
+                                                ].map((input, index) => {
+                                                    return (
+                                                        <Fragment key={index}>
+                                                            <Color
+                                                            type="bg"
+                                                            color="#270c86"
+                                                            className="w-full rounded-md">
+                                                                {
+                                                                    input.type !== "textarea" ? (
+                                                                        <input
+                                                                        {...register(input.key as any)}
+                                                                        type={input.type}
+                                                                        placeholder={input.placeHolder}
+                                                                        // autoComplete="on"
+                                                                        className="p-3 md:p-4 xl:p-5 w-full text-white rounded-md focus:outline-none placeholder:text-white"
+                                                                        />
+                                                                    ) : (
+                                                                        <textarea
+                                                                        {...register(input.key as "message")}
+                                                                        placeholder={input.placeHolder}
+                                                                        className="p-3 md:p-4 xl:p-5 w-full min-h-[100px] resize-none text-white rounded-md focus:outline-none placeholder:text-white"
+                                                                        />
+                                                                    )
+                                                                }
+                                                            </Color>
+                                                        </Fragment>
+                                                    );
+                                                })
+                                            }
+                                        </FlexCol>
+                                        <Button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        color="bg-[#270c86] text-white">
+                                            Odeslat formulář
+                                        </Button>
+                                    </FlexCol>
+                                </Padding>
+                            </form>
                         </Color>
                         <FlexCol className="gap-2 md:gap-3 lg:gap-4">
                             <iframe
