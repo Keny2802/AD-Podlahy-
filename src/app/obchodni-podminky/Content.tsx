@@ -1,6 +1,9 @@
 import {
     Fragment
 } from "react";
+import {
+    termsAndConditionsSet
+} from "../components/termsAndConditionsSet";
 
 import ContactHeader from "../components/ContactHeader";
 import Header from "../components/Header";
@@ -10,8 +13,6 @@ import MarginTop from "../components/MarginTop";
 import BodyText from "../components/BodyText";
 import FlexCol from "../components/FlexCol";
 import SmallerHeading from "../components/SmallerHeading";
-import List from "../components/List";
-import ListItem from "../components/ListItem";
 import About from "../sections/About";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
@@ -23,85 +24,42 @@ const Content = () => {
             <Header />
             <Section
             color="secondary">
-                <Heading>
-                    Obchodní podmínky (Všeobecné obchodní podmínky)
-                </Heading>
-                <MarginTop>
+                <FlexCol className="gap-3">
+                    <Heading>
+                        Obchodní podmínky (Všeobecné obchodní podmínky)
+                    </Heading>
                     <BodyText className="max-w-5xl">
                         Tyto obchodní podmínky (dále jen „obchodní podmínky“) upravují práva a povinnosti mezi provozovatelem webových stránek a zákazníky v souladu s § 1751 zákona č. 89/2012 Sb., občanský zákoník.
                     </BodyText>
-                </MarginTop>
-                <MarginTop>
-                    <FlexCol>
+                </FlexCol>
+                <MarginTop className="lg:mt-6">
+                    <FlexCol className="gap-3">
                         {
-                            [
-                                {
-                                    title: "Identifikace provozovatele",
-                                    text: [
-                                        "Název firmy: AD Podlahy, IČO: 05000335, DIČ: CZ05000335, Sídlo: Jiráskova 2189, 755 01 Vsetín, E-mail: adpodlahy@seznam.cz Telefon: +420 732 429 996.",
-                                        "(dále jen „poskytovatel“)",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                                {
-                                    title: "",
-                                    text: [
-                                        "",
-                                        "",
-                                    ]
-                                },
-                            ].map((block, index) => {
+                            termsAndConditionsSet.map((block, index) => {
+                                const {
+                                    title,
+                                    text
+                                } = block;
+
                                 return (
                                     <Fragment key={index}>
-                                        {/* <SmallerHeading></SmallerHeading> */}
+                                        <FlexCol className="gap-2">
+                                            <SmallerHeading>
+                                                {`${index + 1}. ${title}`}
+                                            </SmallerHeading>
+                                            <MarginTop >
+                                                {
+                                                    text.map((textBlock, idx) => {
+                                                        return (
+                                                            <BodyText
+                                                            key={idx}>
+                                                                {`${index + 1}.${idx + 1} ${textBlock}`}
+                                                            </BodyText>
+                                                        );
+                                                    })
+                                                }
+                                            </MarginTop>
+                                        </FlexCol>
                                     </Fragment>
                                 );
                             })

@@ -1,10 +1,18 @@
 import {
     Fragment
 } from "react";
+import {
+    cookiePolicySet
+} from "../components/cookiePolicySet";
 
 import ContactHeader from "../components/ContactHeader";
 import Header from "../components/Header";
 import Section from "../components/Section";
+import Heading from "../components/Heading";
+import MarginTop from "../components/MarginTop";
+import BodyText from "../components/BodyText";
+import FlexCol from "../components/FlexCol";
+import SmallerHeading from "../components/SmallerHeading";
 import About from "../sections/About";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
@@ -16,7 +24,45 @@ const Content = () => {
             <Header />
             <Section
             color="secondary">
-                d
+                <FlexCol className="gap-3">
+                    <Heading>
+                        Nastavení cookies (Cookie Policy)
+                    </Heading>
+                </FlexCol>
+                <MarginTop className="lg:mt-6">
+                    <FlexCol className="gap-3">
+                        {
+                            cookiePolicySet.map((block, index) => {
+                                const {
+                                    title,
+                                    text
+                                } = block;
+
+                                return (
+                                    <Fragment key={index}>
+                                        <FlexCol className="gap-2">
+                                            <SmallerHeading>
+                                                {`${index + 1}. ${title}`}
+                                            </SmallerHeading>
+                                            <MarginTop >
+                                                {
+                                                    text.map((textBlock, idx) => {
+                                                        return (
+                                                            <BodyText
+                                                            key={idx}>
+                                                                {`${index + 1}.${idx + 1} ${textBlock}`}
+                                                            </BodyText>
+                                                        );
+                                                    })
+                                                }
+                                            </MarginTop>
+                                        </FlexCol>
+                                    </Fragment>
+                                );
+                            })
+                        }
+                    </FlexCol>
+                </MarginTop>
             </Section>
             <About />
             <Contact />
