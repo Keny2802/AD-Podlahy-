@@ -4,12 +4,12 @@ import {
 } from "react";
 import clsx from "clsx";
 
-type SmallerHeadingType = {
+type props = {
     className?: string;
     children: ReactNode;
 };
 
-const SmallerHeading = ({ ...props } : SmallerHeadingType) => {
+const SmallerHeading: React.FC<props> = (props: props) => {
     const {
         className,
         children

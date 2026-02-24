@@ -9,7 +9,7 @@ import {
 } from "next/server";
 
 // const resend = new Resend(process.env.RESEND_API_KEY);
-const resend = new Resend("re_YXkDMQ7x_KWhfwyB4tdg6U58QizYXnyRZ");
+const resend = new Resend("re_LzP42K9p_JyWQ6sMNdTRP7NwoDGHzJAJj");
 
 export async function POST (request: Request) {
     try {
@@ -39,9 +39,7 @@ export async function POST (request: Request) {
 
         await resend.emails.create({
             from: "onboarding@resend.dev",
-            // to: `${process.env.My_EMAIL}`,
-            // to: process.env.MY_EMAIL || "info.modernizujme@gmail.com",
-            to: `info.modernizujme@gmail.com`,
+            to: `adpodlahy@seznam.cz`,
             subject: "Nová zpráva / poptávka z adpodlahy.cz",
             html: `
             <p>
@@ -51,7 +49,7 @@ export async function POST (request: Request) {
                 E-mail: ${email}
             </p>
             <p>
-                Telefonní číslo: ${phone}
+                Telefonní číslo: ${phone?.trim() || "-"}
             </p>
             <p>
                 Adresa: ${adress}
