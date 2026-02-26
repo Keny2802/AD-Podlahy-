@@ -6,6 +6,7 @@ import ScrollProgressBar from "./components/ScrollProgressBar";
 
 export const metadata: Metadata = {
   // title: "AD Podlahy | Adam Šimara",
+  metadataBase: new URL("https://www.adpodlahy.cz/"),
   title: "Lité betonové podlahy a čerpání betonu | AD Podlahy | Adam Šimara",
   // description: "Specializujeme se na dovoz a čerpání betonových směsí včetně realizace litých podlah.",
   description: "AD Podlahy - dovoz a čerpání betonových směsí, realizace betonových podlah pro rodinné domy i průmyslové objekty. Kvalita, rychlost a spolehlivost.",

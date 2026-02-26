@@ -8,6 +8,7 @@ import {
 import Content from "./Content";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.adpodlahy.cz/"),
   title: "Stříkaná izolace - spolehlivá hydroizolace střech a základů | AD Podlahy",
   description: "Profesionální stříkaná izolace pro střechy, střechy hal, sklepy a základové konstrukce. Rychlá aplikace, dokonalé utěsnění a dlouhá životnost. AD Podlahy - kvalitně a spolehlivě.",
   keywords: [

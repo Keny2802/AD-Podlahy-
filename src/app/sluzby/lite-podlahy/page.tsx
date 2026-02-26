@@ -8,6 +8,7 @@ import {
 import Content from "./Content";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.adpodlahy.cz/"),
   title: "Lité podlahy - výroba na míru, dovoz a realizace | AD Podlahy",
   description: "Profesionální lité betonové podlahy pro rodinné domy, haly i průmysl. Dovoz betonu, čerpání a realizace. AD Podlahy - rychle a kvalitně.",
   keywords: [
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ]
   },
   openGraph: {
-    title: "Lití betonových podlah | AD Podlahy",
+    title: "Suché potěry | AD Podlahy",
     description: "Dovoz a čerpání betonových směsí včetně realizace kvalitních litých podlah. Spolehlivě, rychle a profesionálně. AD podlahy - spolehlivé řešení pro domy i průmysl.",
     url: "https://www.adpodlahy.cz/sluzby/lite-podlahy",
     images: [

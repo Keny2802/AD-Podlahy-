@@ -21,6 +21,7 @@ import {
     ContactFormSchema,
     ContactFormProps
 } from "@/app/lib/validation";
+import Link from "next/link";
 
 import RelativeOverlayWrapper from "../components/RelativeOverlayWrapper";
 import Wrapper from "../components/Wrapper";
@@ -34,6 +35,7 @@ import BodyText from "../components/BodyText";
 import Button from "../components/Button";
 import Logo from "../components/Logo";
 import HeaderLink from "../components/HeaderLink";
+import MarginTop from "../components/MarginTop";
 
 const Contact = () => {
     const router = useRouter();
@@ -174,6 +176,18 @@ const Contact = () => {
                                                     );
                                                 })
                                             }
+                                            <Wrapper className="text-sm text-gray-600 text-center flex justify-center items-center gap-0.5">
+                                                <p className="text-sm text-gray-600 text-center">
+                                                    Odesláním formuláře souhlasíte se zásadami o
+                                                </p>
+                                                {" "}
+                                                <Link
+                                                href="/ochrana-osobnich-udaju"
+                                                target="_blank"
+                                                className="border-b border-gray-400">
+                                                    ochraně osobních údajů
+                                                </Link>.
+                                            </Wrapper>
                                         </FlexCol>
                                         <Button
                                         type="submit"

@@ -8,6 +8,7 @@ import {
 import Content from "./Content";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.adpodlahy.cz/"),
   title: "Základové desky - realizace na míru pro domy a haly | AD Podlahy",
   description: "Realizace základových desek pro rodinné domy, haly a stavby. Zemní práce, betonáž, armování a kompletní provedení. AD Podlahy - spolehlivě a kvalitně.",
   keywords: [

@@ -8,6 +8,7 @@ import {
 import Content from "./Content";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.adpodlahy.cz/"),
   title: "Zemní práce - výkopy, terénní úpravy a příprava stavby | AD Podlahy",
   description: "Profesionální zemní práce pro rodinné domy, haly i rekonstrukce. Výkopy, terénní úpravy, odstranění ornice a příprava stavby pro další realizace. AD Podlahy - spolehlivě a kvalitně.",
   keywords: [
