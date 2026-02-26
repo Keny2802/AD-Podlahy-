@@ -4,12 +4,18 @@ import {
 import Image from "next/image";
 import clsx from "clsx";
 
+type FillType = {
+    fill: true;
+};
+
+type SizeType = {
+    width: number;
+    height: number;
+};
+
 type ImageType = {
     className?: string;
     id?: string
-    fill?: boolean;
-    width?: number;
-    height?: number;
     src: string;
     alt: string;
     loading?: "eager" | "lazy";
@@ -18,15 +24,12 @@ type ImageType = {
 
     onClick?: () => void;
     onLoad?: () => void;
-};
+} & (FillType | SizeType);
 
 const Img = ({ ...props }: ImageType) => {
     const {
         className,
         id,
-        fill,
-        width,
-        height,
         src,
         alt,
         loading,
@@ -40,24 +43,25 @@ const Img = ({ ...props }: ImageType) => {
     return (
         <Fragment>
             <Image
-            {...(fill ?
-                { fill: true } : { width, height }
-            )}
-            src={src}
-            alt={alt}
-            {
-                ...(
-                    loading ?
-                    { loading: loading } : { loading: "lazy" }
-                )
-            }
-            style={style}
-            draggable={draggable}
+            // {...(fill ?
+            //     { fill: true } : { width, height }
+            // )}
+            // src={src}
+            // alt={alt}
+            // {
+            //     ...(
+            //         loading ?
+            //         { loading: loading } : { loading: "lazy" }
+            //     )
+            // }
+            // style={style}
+            // draggable={draggable}
 
-            onClick={onClick}
-            onLoad={onLoad}
+            // onClick={onClick}
+            // onLoad={onLoad}
 
-            id={id}
+            // id={id}
+            {...props}
             className={clsx(className, "cursor-pointer image-component")}
             />
         </Fragment>
