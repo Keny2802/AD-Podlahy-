@@ -161,13 +161,13 @@ const Contact = () => {
                                                                         type={input.type}
                                                                         placeholder={input.placeHolder}
                                                                         // autoComplete="on"
-                                                                        className="p-3 md:p-4 xl:p-5 w-full text-white rounded-md focus:outline-none placeholder:text-white"
+                                                                        className="border border-gray-200 w-full max-w-full p-3 md:p-4 xl:p-5 text-black rounded-md focus:outline-none placeholder:text-white"
                                                                         />
                                                                     ) : (
                                                                         <textarea
                                                                         {...register(input.key as "message")}
                                                                         placeholder={input.placeHolder}
-                                                                        className="p-3 md:p-4 xl:p-5 w-full min-h-[100px] resize-none text-white rounded-md focus:outline-none placeholder:text-white"
+                                                                        className="border border-gray-200 w-full max-w-full min-h-[100px] p-3 md:p-4 xl:p-5 resize-none text-black rounded-md focus:outline-none placeholder:text-white"
                                                                         />
                                                                     )
                                                                 }
@@ -176,7 +176,7 @@ const Contact = () => {
                                                     );
                                                 })
                                             }
-                                            <Wrapper className="text-sm text-gray-600 text-center flex justify-center items-center gap-0.5">
+                                            <Wrapper className="text-sm text-gray-600 text-center flex justify-center items-center gap-1">
                                                 <p className="text-sm text-gray-600 text-center">
                                                     Odesláním formuláře souhlasíte se zásadami o
                                                 </p>
