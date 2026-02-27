@@ -114,7 +114,7 @@ const Contact = () => {
                                         <SmallerHeading>
                                             Nezávazná poptávka
                                         </SmallerHeading>
-                                        <BodyText>
+                                        <BodyText className="text-center">
                                             Vyplňte nezávaznou poptávku. Ozveme se Vám co nejdříve.
                                         </BodyText>
                                     </FlexCol>
@@ -176,7 +176,7 @@ const Contact = () => {
                                                     );
                                                 })
                                             }
-                                            <Wrapper className="text-sm text-gray-600 text-center flex justify-center items-center gap-1">
+                                            <Wrapper className="text-sm text-gray-600 text-center flex justify-center items-center flex-col lg:flex-row gap-1">
                                                 <p className="text-sm text-gray-600 text-center">
                                                     Odesláním formuláře souhlasíte se zásadami o
                                                 </p>
