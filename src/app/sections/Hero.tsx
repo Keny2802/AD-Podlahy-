@@ -22,12 +22,12 @@ const Hero = () => {
         <Fragment>
             <RelativeOverlayWrapper className="w-full min-h-screen text-white">
                 <Img
-                    fill={true}
-                    // src="/fota/sekce/hero/transformers.avif"
-                    // src="/fota/galerie/foto-galerie-1.avif"
-                    src="/fota/sekce/hero/hero.jpeg"
-                    alt="Komplexní služby, vše kolem betonu"
-                    className="object-cover"
+                fill={true} 
+                // src="/fota/sekce/hero/transformers.avif"
+                // src="/fota/galerie/foto-galerie-1.avif"
+                src="/fota/sekce/hero/hero.jpeg"
+                alt="Komplexní služby, vše kolem betonu"
+                className="object-cover"
                 />
                 <Wrapper className="absolute inset-0 bg-black/30"></Wrapper>
                 <Padding>
@@ -40,17 +40,18 @@ const Hero = () => {
                                 Specializujeme se na dovoz a čerpání betonových směsí včetně realizace litých podlah.
                             </HeroSubheading>
                         </Padding>
-                        <Wrapper className="p-2.5 md:p-3 lg:p-4 w-full md:w-max flex justify-center items-center flex-col md:flex-row gap-2 md:gap-3 lg:gap-4">
+                        <Wrapper className="p-2.5 md:p-3 lg:p-4 w-full max-w-[500px] md:w-max flex justify-center items-center flex-col md:flex-row gap-2 md:gap-3 lg:gap-4">
                             <DottedButton
                             href="https://youtube.com/@adpodlahy"
                             className="w-full md:min-w-[300px] flex justify-center items-center gap-2 md:gap-2.5 lg:gap-3">
                                 <YouTube />
                                 Podívat se na naše videa
                             </DottedButton>
-                            <YAnimation className="w-full md:min-w-[300px] rounded-2xl p-3 md:p-4 lg:p-4.5 bg-[#270c86] font-semibold cursor-pointer cta-component">
+                            <YAnimation className="w-full md:min-w-[300px] rounded-2xl p-3 md:p-4 lg:p-4.5 bg-[#270c86] text-center font-semibold cursor-pointer cta-component">
                                 <Link
                                 href="#kontakt"
-                                onClick={(e) => HashLess(e, "kontakt")}>
+                                onClick={(e) => HashLess(e, "kontakt")}
+                                className="text-white">
                                     Domluvit Konzultaci
                                 </Link>
                             </YAnimation>

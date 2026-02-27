@@ -27,7 +27,7 @@ const Garage = () => {
                 style={{
                     clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)"
                 }}></Wrapper>
-                <Padding className="text-white relative z-10">
+                <Padding className="text-white relative z-[10]">
                     <Padding>
                         <Heading className="text-center">
                             Doprava a čerpání betonu
@@ -52,7 +52,8 @@ const Garage = () => {
                                                         className="px-3">
                                                             <Cta
                                                             href={card.href}
-                                                            color="bg-[#270c86]">
+                                                            color="bg-[#270c86]"
+                                                            className="text-white">
                                                                 {card.cta}
                                                             </Cta>
                                                         </OverlayWrapper>

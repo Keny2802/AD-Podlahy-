@@ -89,11 +89,11 @@ const Header = ({ ...props }: HeaderType) => {
                 duration: 0.3,
                 ease: "easeOut"
             }}
-            className={clsx(className, `bg-white shadow-md border-b border-gray-200 w-full z-50 header-component`)}>
+            className={clsx(className, `bg-white shadow-md border-b border-gray-200 w-full z-[100] header-component`)}>
                 <Padding>
                     <Wrapper className="flex justify-between items-center gap-2 md:gap-3 lg:gap-4">
                         <Logo/>
-                        <ul className="header-list hidden md:flex justify-between items-center flex-wrap gap-2 md:gap-3 lg:gap-4">
+                        <ul className="hidden md:flex justify-between items-center flex-wrap gap-2 md:gap-3 lg:gap-4 header-list">
                             {
                                 HeaderSet.map((headerItem, index) => {
                                     return (

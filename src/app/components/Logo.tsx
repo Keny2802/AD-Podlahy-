@@ -40,7 +40,7 @@ const Logo = ({ ...props }: LogoType) => {
                 }
                 src="/fota/logo/logo-bez-pozadi.avif"
                 alt="Logo AD Podlahy"
-                className={clsx(className, "logo-component")}
+                className={clsx(className, "block max-w-full w-[200px] h-auto logo-component")}
                 />
             </Link>
         </Fragment>

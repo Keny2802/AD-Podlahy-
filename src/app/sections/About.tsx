@@ -41,7 +41,7 @@ const About = () => {
                                 color="bg-white"
                                 href="#kontakt"
                                 onClick={(event) => HashLess(event, "kontakt")}
-                                className="text-center text-black">
+                                className="text-center text-black z-10 w-full md:max-w-[400px]">
                                     Kontaktujte nás
                                 </Cta>
                             </FlexCol>

@@ -98,7 +98,7 @@ const Contact = () => {
                         <Heading>
                             Máte dotaz?
                         </Heading>
-                        <BodyText>
+                        <BodyText className="text-center">
                             Spojte se s námi prostřednictvím emailu nebo telefonické komunikace.
                         </BodyText>
                     </FlexCol>
