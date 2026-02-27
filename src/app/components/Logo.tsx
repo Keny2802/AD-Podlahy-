@@ -11,15 +11,21 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 
+type FillType = {
+    fill: boolean;
+};
+
 type SizeType = {
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
 };
 
 type LogoType = {
     className?: string;
     children?: ReactNode;
 } & SizeType;
+// & (SizeType | FillType);
+// & (SizeType | FillType);
 
 const Logo = ({ ...props }: LogoType) => {
     const {
@@ -49,6 +55,7 @@ const Logo = ({ ...props }: LogoType) => {
                 alt="Logo AD Podlahy"
                 loading="eager"
                 className={clsx(className, "block min-w-[200px] max-w-full h-auto logo-component")}
+                {...props}
                 />
             </Link>
         </Fragment>
