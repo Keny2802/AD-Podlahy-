@@ -79,6 +79,13 @@ li {
   width: var(--full);
 }
 
+.w-2 {
+  width: 8px;
+}
+
+.w-4 { width: 16px; }
+.w-6 { width: 24px; }
+
 .w-\[200px\] {
   width: 200px;
 }
@@ -86,6 +93,8 @@ li {
 .w-\[320px\] {
   width: 320px;
 }
+
+.max-w-\[200px\] { max-width: 200px; }
 
 .max-w-\[400px\] {
   max-width: 400px;
@@ -111,6 +120,12 @@ li {
 
 .min-h-screen {
   min-height: var(--h-screen);
+}
+
+.max-h-\[200px\] { max-height: 200px; }
+
+.h-12 {
+  height: 48px;
 }
 
 .h-auto {
@@ -454,6 +469,16 @@ li {
   padding-right: 12px;
 }
 
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-24 {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .gap-1 {
   gap: 4px;
 }
@@ -552,6 +577,8 @@ li {
   left: 0;
   right: 0;
 }
+
+.place-content-center { place-content: center; }
 
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }

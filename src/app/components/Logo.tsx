@@ -11,12 +11,15 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 
+type SizeType = {
+    width: number;
+    height: number;
+};
+
 type LogoType = {
     className?: string;
-    width?: number;
-    height?: number;
     children?: ReactNode;
-};
+} & SizeType;
 
 const Logo = ({ ...props }: LogoType) => {
     const {
@@ -35,12 +38,17 @@ const Logo = ({ ...props }: LogoType) => {
                 <Image
                 {
                 ...(!width && !height) ?
-                { width: 200, height: 200 }
+                {
+                    width: 200,
+                    height: 200,
+                    className: "max-w-[200px] max-h-[200px]"
+                }
                 : { width: width, height: height }
                 }
                 src="/fota/logo/logo-bez-pozadi.jpg"
                 alt="Logo AD Podlahy"
-                className={clsx(className, "block max-w-full w-[200px] h-auto logo-component")}
+                loading="eager"
+                className={clsx(className, "block min-w-[200px] max-w-full h-auto logo-component")}
                 />
             </Link>
         </Fragment>

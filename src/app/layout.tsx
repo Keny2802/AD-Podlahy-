@@ -2,6 +2,8 @@ import type {
   Metadata
 } from "next";
 import "./globals.css";
+
+import BarLoader from "./components/BarLoader";
 import ScrollProgressBar from "./components/ScrollProgressBar";
 
 export const metadata: Metadata = {
@@ -59,6 +61,7 @@ export default function RootLayout({
   return (
     <html>
       <body>
+        <BarLoader />
         <ScrollProgressBar />
         {children}
       </body>
