@@ -51,7 +51,7 @@ const About = () => {
                                 height={500}
                                 src="/fota/sekce/o-nas/o-nas.avif"
                                 alt="Firemní vozy společnosti AD podlahy"
-                                className="w-full max-w-[400px] lg:max-w-[500px] rounded-md"
+                                className="w-full max-h-[400px] max-w-[400px] lg:max-w-[500px] rounded-md"
                                 />
                             </YAnimation>
                         </Flex>

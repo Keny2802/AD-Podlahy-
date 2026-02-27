@@ -123,6 +123,7 @@ li {
 }
 
 .max-h-\[200px\] { max-height: 200px; }
+.max-h-\[400px\] { max-height: 400px; }
 
 .h-12 {
   height: 48px;

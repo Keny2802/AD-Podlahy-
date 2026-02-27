@@ -22,7 +22,7 @@ export const GarageSet = [
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-5.avif",
         href: "/vozovy-park/mercedes-cerpadlo-betonu-70m",
-        cta: "Mercedes Čerpadlo betonu 70 m"
+        cta: "Mercedes čerpadlo betonu 70 m"
     },
     {
         img: "/fota/sekce/vozovy-park/vozovy-park-6-1.avif",
