@@ -79,11 +79,11 @@ const SwipeSlider = ({
     <div
       ref={containerRef}
       className={clsx(
-        "fixed inset-0 z-50 bg-black/90 flex justify-center items-center overflow-hidden",
-        className
+        className,
+        "fixed inset-0 z-[100] bg-black/90 flex justify-center items-center overflow-hidden"
       )}
     >
-      <div className="relative w-screen max-w-7xl h-[85vh] md:h-[90vh] mx-auto p">
+      <div className="relative w-screen max-w-7xl h-[85vh] md:h-[90vh] mx-auto">
         <motion.div
           className="flex items-center h-full"
           drag="x"
@@ -102,7 +102,7 @@ const SwipeSlider = ({
           {src.map((url, idx) => (
             <motion.div
               key={url}
-              className="shrink-0 h-full w-full flex items-center justify-center"
+              className="shrink-0 h-full w-full flex justify-center items-center"
               style={{ width: slideWidth || "100vw" }}
               animate={{
                 scale: idx === activeIndex ? 1 : 0.92,
@@ -120,7 +120,7 @@ const SwipeSlider = ({
         </motion.div>
 
         {/* Navigační tečky + zavřít */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-10">
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center items-center gap-3 z-[30]">
           {src.map((_, i) => (
             <button
               key={i}
@@ -128,15 +128,15 @@ const SwipeSlider = ({
               className={clsx(
                 "w-3 h-3 rounded-full cursor-pointer transition-colors duration-300 ease-in-out",
                 i === activeIndex
-                  ? "bg-white scale-125 shadow-lg"
-                  : "bg-white/60 hover:bg-white/70"
+                  ? "bg-[#270c86] scale-125 shadow-lg"
+                  : "bg-[#c72026] hover:bg-white/70"
               )}
             />
           ))}
         </div>
         <button
           onClick={() => setToClosed(true)} // nebo zavolat prop onClose
-          className="absolute top-6 right-6 text-black text-4xl font-light z-index cursor-pointer transition-colors duration-300 ease-in-out"
+          className="border-none bg-transparent absolute top-6 right-6 text-white text-4xl font-light z-[50] cursor-pointer transition-colors duration-300 ease-in-out"
         >
           <XIcon />
         </button>
