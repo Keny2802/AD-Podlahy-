@@ -25,6 +25,7 @@ const Hero = () => {
                 fill={true} 
                 // src="/fota/sekce/hero/transformers.avif"
                 // src="/fota/galerie/foto-galerie-1.avif"
+                loading="eager"
                 src="/fota/sekce/hero/hero.jpeg"
                 alt="Komplexní služby, vše kolem betonu"
                 className="object-cover"
