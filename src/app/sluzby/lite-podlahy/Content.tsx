@@ -22,7 +22,7 @@ import ListItem from "@/app/components/ListItem";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
-import SwipeSlider from "@/app/components/SwipeSlider";
+import Carousel from "@/app/components/Carousel";
 
 const images = [
     "/fota/podstranky/lite-podlahy/lite-podlahy-0.jpeg",
@@ -32,10 +32,10 @@ const images = [
     "/fota/podstranky/lite-podlahy/lite-podlahy-2.avif",
     "/fota/podstranky/lite-podlahy/lite-podlahy-01.jpg",
     "/fota/podstranky/lite-podlahy/lite-podlahy-4.avif"
-]
+];
 
 const Content = () => {
-    const [imgIndex, setImgIndex] = useState<number | null>(0);
+    const [imgIndex, setImgIndex] = useState<number>(0);
     const [isClosed, setToClosed] = useState<boolean>(true);
 
     return (
@@ -59,7 +59,7 @@ const Content = () => {
                                 ].map((textBlock, index) => {
                                     return (
                                         <BodyText
-                                        key={index}>
+                                            key={index}>
                                             {textBlock}
                                         </BodyText>
                                     );
@@ -68,15 +68,15 @@ const Content = () => {
                         </FlexCol>
                         <YAnimation className="w-full cursor-pointer">
                             <Img
-                            width={300}
-                            height={300}
-                            onClick={() => {
-                                setImgIndex(0);
-                                setToClosed(false);
-                            }}
-                            src="/fota/podstranky/lite-podlahy/lite-podlahy-0.jpeg"
-                            alt="Stříkání lité podlahy realizace firmy AD Podlady"
-                            className="w-full max-h-[350px] md:min-w-[300px] md:max-w-[600px] md:max-h-[450px] object-cover rounded-md"
+                                width={300}
+                                height={300}
+                                onClick={() => {
+                                    setImgIndex(0);
+                                    setToClosed(false);
+                                }}
+                                src="/fota/podstranky/lite-podlahy/lite-podlahy-0.jpeg"
+                                alt="Stříkání lité podlahy realizace firmy AD Podlady"
+                                className="w-full max-h-[350px] md:min-w-[300px] md:max-w-[600px] md:max-h-[450px] object-cover rounded-md"
                             />
                         </YAnimation>
                     </Flex>
@@ -99,14 +99,14 @@ const Content = () => {
                                 ].map((card, index) => {
                                     return (
                                         <FlexCol
-                                        key={index}
-                                        className="justify-center items-center gap-4 md:gap-6 lg:gap-8">
+                                            key={index}
+                                            className="justify-center items-center gap-4 md:gap-6 lg:gap-8">
                                             <Img
-                                            width={200}
-                                            height={200}
-                                            src={card.image}
-                                            alt={card.title}
-                                            className="max-w-[200px] max-h-[200px]"
+                                                width={200}
+                                                height={200}
+                                                src={card.image}
+                                                alt={card.title}
+                                                className="max-w-[200px] max-h-[200px] object-contain"
                                             />
                                             <BodyText className="lg:max-w-sm">
                                                 {card.title}
@@ -122,34 +122,34 @@ const Content = () => {
                     <Flex className="justify-center flex-col gap-2 md:gap-4 lg:gap-6">
                         <YAnimation className="w-full cursor-pointer">
                             <Img
-                            width={300}
-                            height={300}
-                            onClick={() => {
-                                setImgIndex(1);
-                                setToClosed(false);
-                            }}
-                            src="/fota/podstranky/lite-podlahy/lite-podlahy-5.avif"
-                            alt="Litá podlaha pokrytá epoxidem realizace společností AD podlahy"
-                            className="w-full md:min-w-[300px] md:max-w-[500px] object-cover rounded-md"
+                                width={300}
+                                height={300}
+                                onClick={() => {
+                                    setImgIndex(1);
+                                    setToClosed(true);
+                                }}
+                                src="/fota/podstranky/lite-podlahy/lite-podlahy-5.avif"
+                                alt="Litá podlaha pokrytá epoxidem realizace společností AD podlahy"
+                                className="w-full md:min-w-[300px] md:max-w-[500px] object-cover rounded-md"
                             />
                         </YAnimation>
                         <FlexCol className="max-w-3xl gap-2 md:gap-3 lg:gap-4 cursor-pointer">
-                        {
-                            [
-                                `Anhydritový podlahový potěr je tekutá směs na bázi síranu vápenatého se samonivelací určená pro vnitřní podlahy umožňující dokonalé srovnání podlahových konstrukcí a vytvářející ideálně rovnou a hladkou podlahovou plochu pro finální nášlapnou vrstvu - dlažba, plovoucí podlahy, PVC, koberce, parkety… nebo při určitých úpravách může sloužit jako finální podlaha.`,
-                                `Po zaschnutí se vyznačuje homogenní a pevnou strukturou. Je vyráběn z pojiva na bázi síranu, jemnozrnného kameniva, vody a chemických přísad ovlivňující zpracovatelnost směsi a konečné vlastnosti anhydritového potěru.`,
-                                `Výroba probíhá na betonárkách na základě průkazních zkoušek pomocí přesného dávkovacího zařízení odkud je směs přepravována autodomíchávači na stavbu v konzistenci pro konečné zpracování. Zde je směs speciálním čerpadlem pomocí gumových hadic dopravena až na místo určení.`,
-                                `Je vhodný pro všechny druhy interiérových podlahových konstrukcí do novostaveb, ale i rekonstrukcí obytných budov, bytové domy, obytné domy, staveb administrativních i obchodních center, objektů občanské vybavenosti, školy, nemocnice a podobně. Není vhodný do trvale vlhkých a venkovních prostor.`
-                            ].map((textBlock, index) => {
-                                return (
-                                    <BodyText
-                                    key={index}>
-                                        {textBlock}
-                                    </BodyText>
-                                );
-                            })
-                        }
-                    </FlexCol>
+                            {
+                                [
+                                    `Anhydritový podlahový potěr je tekutá směs na bázi síranu vápenatého se samonivelací určená pro vnitřní podlahy umožňující dokonalé srovnání podlahových konstrukcí a vytvářející ideálně rovnou a hladkou podlahovou plochu pro finální nášlapnou vrstvu - dlažba, plovoucí podlahy, PVC, koberce, parkety… nebo při určitých úpravách může sloužit jako finální podlaha.`,
+                                    `Po zaschnutí se vyznačuje homogenní a pevnou strukturou. Je vyráběn z pojiva na bázi síranu, jemnozrnného kameniva, vody a chemických přísad ovlivňující zpracovatelnost směsi a konečné vlastnosti anhydritového potěru.`,
+                                    `Výroba probíhá na betonárkách na základě průkazních zkoušek pomocí přesného dávkovacího zařízení odkud je směs přepravována autodomíchávači na stavbu v konzistenci pro konečné zpracování. Zde je směs speciálním čerpadlem pomocí gumových hadic dopravena až na místo určení.`,
+                                    `Je vhodný pro všechny druhy interiérových podlahových konstrukcí do novostaveb, ale i rekonstrukcí obytných budov, bytové domy, obytné domy, staveb administrativních i obchodních center, objektů občanské vybavenosti, školy, nemocnice a podobně. Není vhodný do trvale vlhkých a venkovních prostor.`
+                                ].map((textBlock, index) => {
+                                    return (
+                                        <BodyText
+                                            key={index}>
+                                            {textBlock}
+                                        </BodyText>
+                                    );
+                                })
+                            }
+                        </FlexCol>
                     </Flex>
                 </MarginTop>
                 <MarginTop className="lg:mt-16">
@@ -180,7 +180,7 @@ const Content = () => {
                                             ].map((textBlock, index) => {
                                                 return (
                                                     <ListItem
-                                                    key={index}>
+                                                        key={index}>
                                                         {textBlock}
                                                     </ListItem>
                                                 );
@@ -192,15 +192,15 @@ const Content = () => {
                         </Wrapper>
                         <YAnimation className="cursor-pointer">
                             <Img
-                            width={600}
-                            height={600}
-                            onClick={() => {
-                                setImgIndex(2);
-                                setToClosed(false);
-                            }}
-                            src="/fota/podstranky/lite-podlahy/lite-podlahy-2.jpeg"
-                            alt="Oranžové čerpadlo na lité podlahy společnosti AD Podlady"
-                            className="w-full md:min-w-[300px] md:max-w-[600px] md:max-h-[600px] object-cover rounded-md"
+                                width={600}
+                                height={600}
+                                onClick={() => {
+                                    setImgIndex(2);
+                                    setToClosed(false);
+                                }}
+                                src="/fota/podstranky/lite-podlahy/lite-podlahy-2.jpeg"
+                                alt="Oranžové čerpadlo na lité podlahy společnosti AD Podlady"
+                                className="w-full md:min-w-[300px] md:max-w-[600px] md:max-h-[600px] object-cover rounded-md"
                             />
                         </YAnimation>
                     </Flex>
@@ -209,15 +209,15 @@ const Content = () => {
                     <Flex className="justify-evenly flex-col gap-2 md:gap-4 lg:gap-6">
                         <YAnimation className="cursor-pointer">
                             <Img
-                            width={400}
-                            height={400}
-                            onClick={() => {
-                                setImgIndex(3);
-                                setToClosed(false);
-                            }}
-                            src="/fota/podstranky/lite-podlahy/lite-podlahy-02.jpg"
-                            alt="Epoxidová litá podlaha v útulném domě, realizováno společností AD Podlahy"
-                            className="w-full md:max-w-[400px] object-cover rounded-md"
+                                width={400}
+                                height={400}
+                                onClick={() => {
+                                    setImgIndex(3);
+                                    setToClosed(false);
+                                }}
+                                src="/fota/podstranky/lite-podlahy/lite-podlahy-02.jpg"
+                                alt="Epoxidová litá podlaha v útulném domě, realizováno společností AD Podlahy"
+                                className="w-full md:max-w-[400px] object-cover rounded-md"
                             />
                         </YAnimation>
                         <Wrapper>
@@ -236,7 +236,7 @@ const Content = () => {
                                             ].map((textBlock, index) => {
                                                 return (
                                                     <ListItem
-                                                    key={index}>
+                                                        key={index}>
                                                         {textBlock}
                                                     </ListItem>
                                                 );
@@ -256,7 +256,7 @@ const Content = () => {
                                                 ].map((textBlock, index) => {
                                                     return (
                                                         <ListItem
-                                                        key={index}>
+                                                            key={index}>
                                                             {textBlock}
                                                         </ListItem>
                                                     );
@@ -280,19 +280,19 @@ const Content = () => {
                                 ].map((image, index) => {
                                     return (
                                         <YAnimation
-                                        key={index}
-                                        className="w-full md:max-w-[400px] md:max-h-[400px]">
-                                            <Img
                                             key={index}
-                                            width={400}
-                                            height={400}
-                                            src={image}
-                                            alt={`${index + 1}. Ukázka realizace z fotogalerie litých podlah společnosti AD Podlahy`}
-                                            onClick={() => {
-                                                setImgIndex(index);
-                                                setToClosed(false);
-                                            }}
-                                            className="w-full max-h-[350px] md:max-w-[400px] md:max-h-[400px] object-cover rounded-2xl cursor-pointer"
+                                            className="w-full md:max-w-[400px] md:max-h-[400px]">
+                                            <Img
+                                                key={index}
+                                                width={400}
+                                                height={400}
+                                                src={image}
+                                                alt={`${index + 1}. Ukázka realizace z fotogalerie litých podlah společnosti AD Podlahy`}
+                                                onClick={() => {
+                                                    setImgIndex(index);
+                                                    setToClosed(false);
+                                                }}
+                                                className="w-full max-h-[350px] md:max-w-[400px] md:max-h-[400px] object-cover rounded-2xl cursor-pointer"
                                             />
                                         </YAnimation>
                                     );
@@ -307,13 +307,12 @@ const Content = () => {
             <Footer />
             {
                 imgIndex !== null && !isClosed && (
-                    <SwipeSlider
-                    src={images}
+                    <Carousel
+                    carouselSet={images}
                     startIndex={imgIndex ?? 0}
-                    isClosed={isClosed}
-                    setToClosed={setToClosed}
+                    onClose={setToClosed}
                     />
-                )
+            )
             }
         </Fragment>
     );

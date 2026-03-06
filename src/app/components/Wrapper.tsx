@@ -8,7 +8,7 @@ type WrapperType = {
     className?: string;
     id?: string;
     style?: React.CSSProperties;
-    onClick?: () => void;
+    onClick?: (type: any) => void;
     children?: ReactNode;
 };
 

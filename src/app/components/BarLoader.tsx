@@ -37,7 +37,7 @@ const variants = {
 const BarLoader = () => {
     const [isLoading, setLoading] = useState<boolean>(true);
 
-    const TIMEOUT = 5000;
+    const TIMEOUT = 1250;
 
     useEffect(() => {
         const body = document.body;
@@ -55,7 +55,7 @@ const BarLoader = () => {
         return () => {
             clearTimeout(loadingTimeout);
         };
-    }, []);
+    }, [isLoading]);
 
     return (
         <Fragment>

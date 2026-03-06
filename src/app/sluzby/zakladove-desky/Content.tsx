@@ -23,7 +23,7 @@ import Con from "../zemni-prace/Content";
 import About from "@/app/sections/About";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
-import SwipeSlider from "@/app/components/SwipeSlider";
+import Carousel from "@/app/components/Carousel";
 
 const images = [
     "/fota/podstranky/zakladove-desky/zakladove-desky-1.jpeg",
@@ -203,13 +203,12 @@ const Content = () => {
             <Footer />
             {
                 imgIndex !== null && !isClosed && (
-                    <SwipeSlider
-                    src={images}
+                    <Carousel
+                    carouselSet={images}
                     startIndex={imgIndex ?? 0}
-                    isClosed={isClosed}
-                    setToClosed={setToClosed}
+                    onClose={setToClosed}
                     />
-                )
+            )
             }
         </Fragment>
     );
